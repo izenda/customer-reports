@@ -1,0 +1,22 @@
+<ReportSet OwnerTenantID="" Version="6" ID="97629287-8bd6-4240-a770-663efef5db78" DateModified="10/17/2013 08:47:36" Title="Employee Counts by Location" ShowReportParameters="False" Description="" Header="" PageHeader="" CustomCss="" ReportSetType="ReportDesigner" ReadOnly="False" ViewOnly="False" InsertZeroValues="False" LandscapePrinting="False" FieldValueColumnPairs="2" ItemsPerPage="10000" AddBookmarkForVisualGroup="False" PageBreakAfterVisualGroups="False" Footer="" HeaderJustification="L" FooterJustification="L" TitleJustification="L" DescriptionJustification="L" HeaderImageJustification="L" CsvOnly="False" ShowVisualGroupLabels="False" Database="" UsePaginationInWebView="True" Distinct="True" ShowPageNumber="True" ShowDateTime="True" MinimizeGridWidth="True" VisualGroupStyle="VGHierarchy" CheckBoxDataSources="True" Schedule="2011-01-01 00:00:00" ScheduleTimeZome="-300" Recipients="" RepeatType="None" SendEmailAs="Link" UserName="DefaultAdministrator" Visibility="OnlyMe" Designer="AdHocReportDesigner" DrillDownKey="" ColumnsCount="2" FilterValue="None" MinDate="10/18/2013 08:47:26" MaxDate="10/16/2013 08:47:26">
+	<ReportVisibility>
+		<Property SharedWith="Everyone" Rights="None" />
+	</ReportVisibility>
+	<JoinedTables UseAutoConditions="True" AllowNulls="False">
+		<JoinedTable Name="[public].[companystafflist]" Alias="" RightAlias="" JoinType="INNER" LeftConditionColumn="" RightConditionTable="" RightConditionColumn="" />
+	</JoinedTables>
+	<Report Title="" Code="" Name="Chart">
+		<Options Top="-2147483648" Distinct="True" StoreResults="False" SelectVisibleColumns="True" ChartTypeName="Pie" AddGrandTotals="False" AddPivotTotals="False" TotalsFunction="None" Invert="False" FieldValue="False" AddDeltas="False" LinesPerItem="1" ColumnsLimit="-1" ReportType="Chart" DashboardScroll="True" VisualGroupStyle="VGHierarchy" />
+		<Position X="0" Y="0" ColSpan="1" RowSpan="1" DbDsgn2Height="0" />
+		<Selections>
+			<Selection ColumnName="[public].[companystafflist].[locationdescription]" ColumnSql="" Description="Label" Definition="" FormatString="{0}" GroupBy="False" OrderType="NONE" WidthSettedManually="False" Width="" Visible="True" Gradient="False" InsertZeroValues="False" AggregateFunction="GROUP" Justification="NotSet" LabelJustification="Center" Master="False" GaugeValuesInCurrencyFormat="False" Operator="None" AliasTable="" ShouldBeFormatted="True" TargetReport="" GaugeTargetReport="" GaugeTargetEffect="" Url="example:Page.aspx?id={0}&amp;value={1}" SubtotalTitle="" ValueString="" SubtotalFunction="DEFAULT" SubtotalExpression="" IsItalic="False" IsBold="False" Coefficient="" ColumnGroup="" />
+			<Selection ColumnName="[public].[companystafflist].[displayname]" ColumnSql="" Description="Value" Definition="" FormatString="{0}" GroupBy="False" OrderType="NONE" WidthSettedManually="False" Width="" Visible="True" Gradient="False" InsertZeroValues="False" AggregateFunction="COUNT" Justification="NotSet" LabelJustification="Center" Master="False" GaugeValuesInCurrencyFormat="False" Operator="None" AliasTable="" ShouldBeFormatted="False" TargetReport="" GaugeTargetReport="" GaugeTargetEffect="" Url="example:Page.aspx?id={0}&amp;value={1}" SubtotalTitle="" ValueString="" SubtotalFunction="DEFAULT" SubtotalExpression="" IsItalic="False" IsBold="False" Coefficient="" ColumnGroup="" />
+		</Selections>
+		<ChartProperties>
+			<Property Name="CombineBottom" Value="0" />
+			<Property Name="ShowLegend" Value="False" />
+			<Property Name="ShowPercentage" Value="True" />
+			<Property Name="ShowValue" Value="True" />
+		</ChartProperties>
+	</Report>
+</ReportSet>

@@ -1,0 +1,955 @@
+<style type="text/css">
+ @font-face
+  {font-family:Wingdings;
+  panose-1:5 0 0 0 0 0 0 0 0 0;
+  mso-font-charset:2;
+  mso-generic-font-family:auto;
+  mso-font-pitch:variable;
+  mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+  {font-family:"Cambria Math";
+  panose-1:2 4 5 3 5 4 6 3 2 4;
+  mso-font-charset:1;
+  mso-generic-font-family:roman;
+  mso-font-format:other;
+  mso-font-pitch:variable;
+  mso-font-signature:0 0 0 0 0 0;}
+@font-face
+  {font-family:Tahoma;
+  panose-1:2 11 6 4 3 5 4 4 2 4;
+  mso-font-charset:204;
+  mso-generic-font-family:swiss;
+  mso-font-pitch:variable;
+  mso-font-signature:-520081665 -1073717157 41 0 66047 0;}
+@font-face
+  {font-family:"Arial Black";
+  panose-1:2 11 10 4 2 1 2 2 2 4;
+  mso-font-charset:204;
+  mso-generic-font-family:swiss;
+  mso-font-pitch:variable;
+  mso-font-signature:647 0 0 0 159 0;}
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+  {mso-style-unhide:no;
+  mso-style-qformat:yes;
+  mso-style-parent:"";
+  margin-top:0cm;
+  margin-right:0cm;
+  margin-bottom:8.0pt;
+  margin-left:0cm;
+  mso-pagination:widow-orphan;
+  font-size:9.0pt;
+  mso-bidi-font-size:10.0pt;
+  font-family:"Arial","sans-serif";
+  mso-ascii-font-family:Arial;
+  mso-ascii-theme-font:minor-latin;
+  mso-fareast-font-family:Arial;
+  mso-fareast-theme-font:minor-latin;
+  mso-hansi-font-family:Arial;
+  mso-hansi-theme-font:minor-latin;
+  mso-bidi-font-family:"Times New Roman";
+  mso-bidi-theme-font:minor-bidi;
+  color:#404040;
+  mso-themecolor:text1;
+  mso-themetint:191;
+  mso-font-kerning:1.0pt;
+  mso-ansi-language:EN-US;
+  mso-fareast-language:JA;}
+h1
+  {mso-style-priority:9;
+  mso-style-unhide:no;
+  mso-style-qformat:yes;
+  mso-style-link:"Heading 1 Char";
+  mso-style-next:Normal;
+  margin-top:30.0pt;
+  margin-right:0cm;
+  margin-bottom:12.0pt;
+  margin-left:0cm;
+  mso-pagination:widow-orphan lines-together;
+  page-break-after:avoid;
+  mso-outline-level:1;
+  font-size:14.0pt;
+  mso-bidi-font-size:10.0pt;
+  font-family:"Arial","sans-serif";
+  mso-ascii-font-family:Arial;
+  mso-ascii-theme-font:minor-latin;
+  mso-hansi-font-family:Arial;
+  mso-hansi-theme-font:minor-latin;
+  mso-bidi-font-family:"Times New Roman";
+  mso-bidi-theme-font:minor-bidi;
+  color:#1F4E79;
+  mso-themecolor:accent1;
+  mso-themeshade:128;
+  text-transform:uppercase;
+  mso-font-kerning:0pt;
+  mso-ansi-language:EN-US;
+  mso-fareast-language:JA;}
+h2
+  {mso-style-priority:9;
+  mso-style-qformat:yes;
+  mso-style-link:"Heading 2 Char";
+  mso-style-next:Normal;
+  margin-top:18.0pt;
+  margin-right:0cm;
+  margin-bottom:6.0pt;
+  margin-left:0cm;
+  mso-pagination:widow-orphan lines-together;
+  page-break-after:avoid;
+  mso-outline-level:2;
+  font-size:12.0pt;
+  mso-bidi-font-size:10.0pt;
+  font-family:"Arial","sans-serif";
+  mso-ascii-font-family:Arial;
+  mso-ascii-theme-font:minor-latin;
+  mso-hansi-font-family:Arial;
+  mso-hansi-theme-font:minor-latin;
+  mso-bidi-font-family:"Times New Roman";
+  mso-bidi-theme-font:minor-bidi;
+  color:#5B9BD5;
+  mso-themecolor:accent1;
+  mso-ansi-language:EN-US;
+  mso-fareast-language:JA;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+  {mso-style-priority:99;
+  mso-style-link:"Header Char";
+  margin:0cm;
+  margin-bottom:.0001pt;
+  mso-pagination:widow-orphan;
+  tab-stops:center 234.0pt right 468.0pt;
+  font-size:9.0pt;
+  mso-bidi-font-size:10.0pt;
+  font-family:"Arial","sans-serif";
+  mso-ascii-font-family:Arial;
+  mso-ascii-theme-font:minor-latin;
+  mso-fareast-font-family:Arial;
+  mso-fareast-theme-font:minor-latin;
+  mso-hansi-font-family:Arial;
+  mso-hansi-theme-font:minor-latin;
+  mso-bidi-font-family:"Times New Roman";
+  mso-bidi-theme-font:minor-bidi;
+  color:#404040;
+  mso-themecolor:text1;
+  mso-themetint:191;
+  mso-font-kerning:1.0pt;
+  mso-ansi-language:EN-US;
+  mso-fareast-language:JA;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+  {mso-style-priority:99;
+  mso-style-link:"Footer Char";
+  margin-top:10.0pt;
+  margin-right:0cm;
+  margin-bottom:0cm;
+  margin-left:0cm;
+  margin-bottom:.0001pt;
+  mso-add-space:auto;
+  text-align:right;
+  mso-pagination:widow-orphan;
+  font-size:10.0pt;
+  font-family:"Arial Black","sans-serif";
+  mso-ascii-font-family:"Arial Black";
+  mso-ascii-theme-font:major-latin;
+  mso-fareast-font-family:"Times New Roman";
+  mso-fareast-theme-font:major-fareast;
+  mso-hansi-font-family:"Arial Black";
+  mso-hansi-theme-font:major-latin;
+  mso-bidi-font-family:"Times New Roman";
+  mso-bidi-theme-font:major-bidi;
+  color:#1F4E79;
+  mso-themecolor:accent1;
+  mso-themeshade:128;
+  mso-ansi-language:EN-US;
+  mso-fareast-language:JA;
+  mso-no-proof:yes;}
+p.MsoFooterCxSpFirst, li.MsoFooterCxSpFirst, div.MsoFooterCxSpFirst
+  {mso-style-priority:99;
+  mso-style-link:"Footer Char";
+  mso-style-type:export-only;
+  margin-top:10.0pt;
+  margin-right:0cm;
+  margin-bottom:0cm;
+  margin-left:0cm;
+  margin-bottom:.0001pt;
+  mso-add-space:auto;
+  text-align:right;
+  mso-pagination:widow-orphan;
+  font-size:10.0pt;
+  font-family:"Arial Black","sans-serif";
+  mso-ascii-font-family:"Arial Black";
+  mso-ascii-theme-font:major-latin;
+  mso-fareast-font-family:"Times New Roman";
+  mso-fareast-theme-font:major-fareast;
+  mso-hansi-font-family:"Arial Black";
+  mso-hansi-theme-font:major-latin;
+  mso-bidi-font-family:"Times New Roman";
+  mso-bidi-theme-font:major-bidi;
+  color:#1F4E79;
+  mso-themecolor:accent1;
+  mso-themeshade:128;
+  mso-ansi-language:EN-US;
+  mso-fareast-language:JA;
+  mso-no-proof:yes;}
+p.MsoFooterCxSpMiddle, li.MsoFooterCxSpMiddle, div.MsoFooterCxSpMiddle
+  {mso-style-priority:99;
+  mso-style-link:"Footer Char";
+  mso-style-type:export-only;
+  margin:0cm;
+  margin-bottom:.0001pt;
+  mso-add-space:auto;
+  text-align:right;
+  mso-pagination:widow-orphan;
+  font-size:10.0pt;
+  font-family:"Arial Black","sans-serif";
+  mso-ascii-font-family:"Arial Black";
+  mso-ascii-theme-font:major-latin;
+  mso-fareast-font-family:"Times New Roman";
+  mso-fareast-theme-font:major-fareast;
+  mso-hansi-font-family:"Arial Black";
+  mso-hansi-theme-font:major-latin;
+  mso-bidi-font-family:"Times New Roman";
+  mso-bidi-theme-font:major-bidi;
+  color:#1F4E79;
+  mso-themecolor:accent1;
+  mso-themeshade:128;
+  mso-ansi-language:EN-US;
+  mso-fareast-language:JA;
+  mso-no-proof:yes;}
+p.MsoFooterCxSpLast, li.MsoFooterCxSpLast, div.MsoFooterCxSpLast
+  {mso-style-priority:99;
+  mso-style-link:"Footer Char";
+  mso-style-type:export-only;
+  margin:0cm;
+  margin-bottom:.0001pt;
+  mso-add-space:auto;
+  text-align:right;
+  mso-pagination:widow-orphan;
+  font-size:10.0pt;
+  font-family:"Arial Black","sans-serif";
+  mso-ascii-font-family:"Arial Black";
+  mso-ascii-theme-font:major-latin;
+  mso-fareast-font-family:"Times New Roman";
+  mso-fareast-theme-font:major-fareast;
+  mso-hansi-font-family:"Arial Black";
+  mso-hansi-theme-font:major-latin;
+  mso-bidi-font-family:"Times New Roman";
+  mso-bidi-theme-font:major-bidi;
+  color:#1F4E79;
+  mso-themecolor:accent1;
+  mso-themeshade:128;
+  mso-ansi-language:EN-US;
+  mso-fareast-language:JA;
+  mso-no-proof:yes;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+  {mso-style-priority:2;
+  mso-style-unhide:no;
+  mso-style-qformat:yes;
+  mso-style-link:"Title Char";
+  mso-style-next:Normal;
+  margin:0cm;
+  margin-bottom:.0001pt;
+  line-height:21.0pt;
+  mso-line-height-rule:exactly;
+  mso-pagination:widow-orphan;
+  border:none;
+  mso-border-left-alt:double #1F4E79 6.75pt;
+  mso-border-left-themecolor:accent1;
+  mso-border-left-themeshade:128;
+  padding:0cm;
+  mso-padding-alt:0cm 0cm 0cm 4.0pt;
+  font-size:19.0pt;
+  mso-bidi-font-size:10.0pt;
+  font-family:"Arial Black","sans-serif";
+  mso-ascii-font-family:"Arial Black";
+  mso-ascii-theme-font:major-latin;
+  mso-fareast-font-family:"Times New Roman";
+  mso-fareast-theme-font:major-fareast;
+  mso-hansi-font-family:"Arial Black";
+  mso-hansi-theme-font:major-latin;
+  mso-bidi-font-family:"Times New Roman";
+  mso-bidi-theme-font:major-bidi;
+  color:#1F4E79;
+  mso-themecolor:accent1;
+  mso-themeshade:128;
+  text-transform:uppercase;
+  mso-font-kerning:14.0pt;
+  mso-ansi-language:EN-US;
+  mso-fareast-language:JA;}
+p.MsoClosing, li.MsoClosing, div.MsoClosing
+  {mso-style-priority:4;
+  mso-style-qformat:yes;
+  mso-style-link:"Closing Char";
+  margin-top:18.0pt;
+  margin-right:0cm;
+  margin-bottom:6.0pt;
+  margin-left:0cm;
+  mso-pagination:widow-orphan;
+  font-size:12.0pt;
+  mso-bidi-font-size:10.0pt;
+  font-family:"Arial","sans-serif";
+  mso-ascii-font-family:Arial;
+  mso-ascii-theme-font:minor-latin;
+  mso-fareast-font-family:Arial;
+  mso-fareast-theme-font:minor-latin;
+  mso-hansi-font-family:Arial;
+  mso-hansi-theme-font:minor-latin;
+  mso-bidi-font-family:"Times New Roman";
+  mso-bidi-theme-font:minor-bidi;
+  color:#5B9BD5;
+  mso-themecolor:accent1;
+  mso-font-kerning:1.0pt;
+  mso-ansi-language:EN-US;
+  mso-fareast-language:JA;
+  font-weight:bold;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+  {mso-style-priority:3;
+  mso-style-unhide:no;
+  mso-style-qformat:yes;
+  mso-style-link:"Subtitle Char";
+  mso-style-next:Normal;
+  margin-top:4.0pt;
+  margin-right:0cm;
+  margin-bottom:0cm;
+  margin-left:0cm;
+  margin-bottom:.0001pt;
+  line-height:14.0pt;
+  mso-line-height-rule:exactly;
+  mso-pagination:widow-orphan;
+  border:none;
+  mso-border-left-alt:double #1F4E79 6.75pt;
+  mso-border-left-themecolor:accent1;
+  mso-border-left-themeshade:128;
+  padding:0cm;
+  mso-padding-alt:0cm 0cm 0cm 4.0pt;
+  font-size:12.0pt;
+  mso-bidi-font-size:10.0pt;
+  font-family:"Arial","sans-serif";
+  mso-ascii-font-family:Arial;
+  mso-ascii-theme-font:minor-latin;
+  mso-fareast-font-family:Arial;
+  mso-fareast-theme-font:minor-latin;
+  mso-hansi-font-family:Arial;
+  mso-hansi-theme-font:minor-latin;
+  mso-bidi-font-family:"Times New Roman";
+  mso-bidi-theme-font:minor-bidi;
+  color:#5B9BD5;
+  mso-themecolor:accent1;
+  mso-ansi-language:EN-US;
+  mso-fareast-language:JA;
+  font-weight:bold;}
+strong
+  {mso-style-priority:2;
+  mso-style-qformat:yes;
+  color:#5B9BD5;
+  mso-themecolor:accent1;
+  font-weight:normal;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+  {mso-style-noshow:yes;
+  mso-style-priority:99;
+  mso-style-link:"Balloon Text Char";
+  margin:0cm;
+  margin-bottom:.0001pt;
+  mso-pagination:widow-orphan;
+  font-size:8.0pt;
+  font-family:"Tahoma","sans-serif";
+  mso-fareast-font-family:Arial;
+  mso-fareast-theme-font:minor-latin;
+  color:#404040;
+  mso-themecolor:text1;
+  mso-themetint:191;
+  mso-font-kerning:1.0pt;
+  mso-ansi-language:EN-US;
+  mso-fareast-language:JA;}
+span.MsoPlaceholderText
+  {mso-style-noshow:yes;
+  mso-style-priority:99;
+  mso-style-unhide:no;
+  color:gray;}
+span.SubtitleChar
+  {mso-style-name:"Subtitle Char";
+  mso-style-priority:3;
+  mso-style-unhide:no;
+  mso-style-locked:yes;
+  mso-style-link:Subtitle;
+  mso-ansi-font-size:12.0pt;
+  color:#5B9BD5;
+  mso-themecolor:accent1;
+  mso-font-kerning:0pt;
+  font-weight:bold;}
+span.TitleChar
+  {mso-style-name:"Title Char";
+  mso-style-priority:2;
+  mso-style-unhide:no;
+  mso-style-locked:yes;
+  mso-style-link:Title;
+  mso-ansi-font-size:19.0pt;
+  font-family:"Arial Black","sans-serif";
+  mso-ascii-font-family:"Arial Black";
+  mso-ascii-theme-font:major-latin;
+  mso-fareast-font-family:"Times New Roman";
+  mso-fareast-theme-font:major-fareast;
+  mso-hansi-font-family:"Arial Black";
+  mso-hansi-theme-font:major-latin;
+  mso-bidi-font-family:"Times New Roman";
+  mso-bidi-theme-font:major-bidi;
+  color:#1F4E79;
+  mso-themecolor:accent1;
+  mso-themeshade:128;
+  text-transform:uppercase;
+  mso-font-kerning:14.0pt;}
+p.InvoiceHeading, li.InvoiceHeading, div.InvoiceHeading
+  {mso-style-name:"Invoice Heading";
+  mso-style-priority:2;
+  mso-style-unhide:no;
+  mso-style-qformat:yes;
+  mso-style-next:Normal;
+  margin-top:30.0pt;
+  margin-right:0cm;
+  margin-bottom:12.0pt;
+  margin-left:0cm;
+  mso-pagination:widow-orphan;
+  font-size:14.0pt;
+  mso-bidi-font-size:10.0pt;
+  font-family:"Arial","sans-serif";
+  mso-ascii-font-family:Arial;
+  mso-ascii-theme-font:minor-latin;
+  mso-fareast-font-family:Arial;
+  mso-fareast-theme-font:minor-latin;
+  mso-hansi-font-family:Arial;
+  mso-hansi-theme-font:minor-latin;
+  mso-bidi-font-family:"Times New Roman";
+  mso-bidi-theme-font:minor-bidi;
+  color:#1F4E79;
+  mso-themecolor:accent1;
+  mso-themeshade:128;
+  text-transform:uppercase;
+  mso-font-kerning:1.0pt;
+  mso-ansi-language:EN-US;
+  mso-fareast-language:JA;
+  font-weight:bold;}
+span.Heading1Char
+  {mso-style-name:"Heading 1 Char";
+  mso-style-priority:9;
+  mso-style-unhide:no;
+  mso-style-locked:yes;
+  mso-style-link:"Heading 1";
+  mso-ansi-font-size:14.0pt;
+  color:#1F4E79;
+  mso-themecolor:accent1;
+  mso-themeshade:128;
+  text-transform:uppercase;
+  mso-font-kerning:0pt;
+  font-weight:bold;}
+span.Heading2Char
+  {mso-style-name:"Heading 2 Char";
+  mso-style-priority:9;
+  mso-style-unhide:no;
+  mso-style-locked:yes;
+  mso-style-link:"Heading 2";
+  mso-ansi-font-size:12.0pt;
+  color:#5B9BD5;
+  mso-themecolor:accent1;
+  mso-font-kerning:0pt;
+  font-weight:bold;}
+p.FormHeading, li.FormHeading, div.FormHeading
+  {mso-style-name:"Form Heading";
+  mso-style-priority:2;
+  mso-style-unhide:no;
+  mso-style-qformat:yes;
+  margin-top:0cm;
+  margin-right:0cm;
+  margin-bottom:6.0pt;
+  margin-left:0cm;
+  mso-pagination:widow-orphan;
+  font-size:9.0pt;
+  mso-bidi-font-size:10.0pt;
+  font-family:"Arial","sans-serif";
+  mso-ascii-font-family:Arial;
+  mso-ascii-theme-font:minor-latin;
+  mso-fareast-font-family:Arial;
+  mso-fareast-theme-font:minor-latin;
+  mso-hansi-font-family:Arial;
+  mso-hansi-theme-font:minor-latin;
+  mso-bidi-font-family:"Times New Roman";
+  mso-bidi-theme-font:minor-bidi;
+  color:#404040;
+  mso-themecolor:text1;
+  mso-themetint:191;
+  mso-font-kerning:1.0pt;
+  mso-ansi-language:EN-US;
+  mso-fareast-language:JA;
+  font-weight:bold;}
+p.FormText, li.FormText, div.FormText
+  {mso-style-name:"Form Text";
+  mso-style-priority:2;
+  mso-style-unhide:no;
+  mso-style-qformat:yes;
+  margin-top:0cm;
+  margin-right:0cm;
+  margin-bottom:6.0pt;
+  margin-left:0cm;
+  mso-add-space:auto;
+  mso-pagination:widow-orphan;
+  font-size:9.0pt;
+  mso-bidi-font-size:10.0pt;
+  font-family:"Arial","sans-serif";
+  mso-ascii-font-family:Arial;
+  mso-ascii-theme-font:minor-latin;
+  mso-fareast-font-family:Arial;
+  mso-fareast-theme-font:minor-latin;
+  mso-hansi-font-family:Arial;
+  mso-hansi-theme-font:minor-latin;
+  mso-bidi-font-family:"Times New Roman";
+  mso-bidi-theme-font:minor-bidi;
+  color:#404040;
+  mso-themecolor:text1;
+  mso-themetint:191;
+  mso-font-kerning:1.0pt;
+  mso-ansi-language:EN-US;
+  mso-fareast-language:JA;}
+p.FormTextCxSpFirst, li.FormTextCxSpFirst, div.FormTextCxSpFirst
+  {mso-style-name:"Form TextCxSpFirst";
+  mso-style-priority:2;
+  mso-style-unhide:no;
+  mso-style-qformat:yes;
+  mso-style-type:export-only;
+  margin:0cm;
+  margin-bottom:.0001pt;
+  mso-add-space:auto;
+  mso-pagination:widow-orphan;
+  font-size:9.0pt;
+  mso-bidi-font-size:10.0pt;
+  font-family:"Arial","sans-serif";
+  mso-ascii-font-family:Arial;
+  mso-ascii-theme-font:minor-latin;
+  mso-fareast-font-family:Arial;
+  mso-fareast-theme-font:minor-latin;
+  mso-hansi-font-family:Arial;
+  mso-hansi-theme-font:minor-latin;
+  mso-bidi-font-family:"Times New Roman";
+  mso-bidi-theme-font:minor-bidi;
+  color:#404040;
+  mso-themecolor:text1;
+  mso-themetint:191;
+  mso-font-kerning:1.0pt;
+  mso-ansi-language:EN-US;
+  mso-fareast-language:JA;}
+p.FormTextCxSpMiddle, li.FormTextCxSpMiddle, div.FormTextCxSpMiddle
+  {mso-style-name:"Form TextCxSpMiddle";
+  mso-style-priority:2;
+  mso-style-unhide:no;
+  mso-style-qformat:yes;
+  mso-style-type:export-only;
+  margin:0cm;
+  margin-bottom:.0001pt;
+  mso-add-space:auto;
+  mso-pagination:widow-orphan;
+  font-size:9.0pt;
+  mso-bidi-font-size:10.0pt;
+  font-family:"Arial","sans-serif";
+  mso-ascii-font-family:Arial;
+  mso-ascii-theme-font:minor-latin;
+  mso-fareast-font-family:Arial;
+  mso-fareast-theme-font:minor-latin;
+  mso-hansi-font-family:Arial;
+  mso-hansi-theme-font:minor-latin;
+  mso-bidi-font-family:"Times New Roman";
+  mso-bidi-theme-font:minor-bidi;
+  color:#404040;
+  mso-themecolor:text1;
+  mso-themetint:191;
+  mso-font-kerning:1.0pt;
+  mso-ansi-language:EN-US;
+  mso-fareast-language:JA;}
+p.FormTextCxSpLast, li.FormTextCxSpLast, div.FormTextCxSpLast
+  {mso-style-name:"Form TextCxSpLast";
+  mso-style-priority:2;
+  mso-style-unhide:no;
+  mso-style-qformat:yes;
+  mso-style-type:export-only;
+  margin-top:0cm;
+  margin-right:0cm;
+  margin-bottom:6.0pt;
+  margin-left:0cm;
+  mso-add-space:auto;
+  mso-pagination:widow-orphan;
+  font-size:9.0pt;
+  mso-bidi-font-size:10.0pt;
+  font-family:"Arial","sans-serif";
+  mso-ascii-font-family:Arial;
+  mso-ascii-theme-font:minor-latin;
+  mso-fareast-font-family:Arial;
+  mso-fareast-theme-font:minor-latin;
+  mso-hansi-font-family:Arial;
+  mso-hansi-theme-font:minor-latin;
+  mso-bidi-font-family:"Times New Roman";
+  mso-bidi-theme-font:minor-bidi;
+  color:#404040;
+  mso-themecolor:text1;
+  mso-themetint:191;
+  mso-font-kerning:1.0pt;
+  mso-ansi-language:EN-US;
+  mso-fareast-language:JA;}
+span.HeaderChar
+  {mso-style-name:"Header Char";
+  mso-style-priority:99;
+  mso-style-unhide:no;
+  mso-style-locked:yes;
+  mso-style-link:Header;}
+span.FooterChar
+  {mso-style-name:"Footer Char";
+  mso-style-priority:99;
+  mso-style-unhide:no;
+  mso-style-locked:yes;
+  mso-style-link:Footer;
+  mso-ansi-font-size:10.0pt;
+  font-family:"Arial Black","sans-serif";
+  mso-ascii-font-family:"Arial Black";
+  mso-ascii-theme-font:major-latin;
+  mso-fareast-font-family:"Times New Roman";
+  mso-fareast-theme-font:major-fareast;
+  mso-hansi-font-family:"Arial Black";
+  mso-hansi-theme-font:major-latin;
+  mso-bidi-font-family:"Times New Roman";
+  mso-bidi-theme-font:major-bidi;
+  color:#1F4E79;
+  mso-themecolor:accent1;
+  mso-themeshade:128;
+  mso-font-kerning:0pt;
+  mso-no-proof:yes;}
+span.ClosingChar
+  {mso-style-name:"Closing Char";
+  mso-style-priority:4;
+  mso-style-unhide:no;
+  mso-style-locked:yes;
+  mso-style-link:Closing;
+  mso-ansi-font-size:12.0pt;
+  color:#5B9BD5;
+  mso-themecolor:accent1;
+  font-weight:bold;}
+p.Organization, li.Organization, div.Organization
+  {mso-style-name:Organization;
+  mso-style-priority:4;
+  mso-style-unhide:no;
+  mso-style-qformat:yes;
+  mso-style-next:Normal;
+  margin-top:8.0pt;
+  margin-right:0cm;
+  margin-bottom:0cm;
+  margin-left:0cm;
+  margin-bottom:.0001pt;
+  line-height:120%;
+  mso-pagination:widow-orphan;
+  font-size:9.0pt;
+  mso-bidi-font-size:10.0pt;
+  font-family:"Arial Black","sans-serif";
+  mso-ascii-font-family:"Arial Black";
+  mso-ascii-theme-font:major-latin;
+  mso-fareast-font-family:"Times New Roman";
+  mso-fareast-theme-font:major-fareast;
+  mso-hansi-font-family:"Arial Black";
+  mso-hansi-theme-font:major-latin;
+  mso-bidi-font-family:"Times New Roman";
+  mso-bidi-theme-font:major-bidi;
+  color:#2E74B5;
+  mso-themecolor:accent1;
+  mso-themeshade:191;
+  mso-font-kerning:1.0pt;
+  mso-ansi-language:EN-US;
+  mso-fareast-language:JA;}
+p.ContactInfo, li.ContactInfo, div.ContactInfo
+  {mso-style-name:"Contact Info";
+  mso-style-priority:4;
+  mso-style-unhide:no;
+  mso-style-qformat:yes;
+  margin-top:2.0pt;
+  margin-right:0cm;
+  margin-bottom:0cm;
+  margin-left:0cm;
+  margin-bottom:.0001pt;
+  mso-pagination:widow-orphan;
+  font-size:9.0pt;
+  mso-bidi-font-size:10.0pt;
+  font-family:"Arial","sans-serif";
+  mso-ascii-font-family:Arial;
+  mso-ascii-theme-font:minor-latin;
+  mso-fareast-font-family:Arial;
+  mso-fareast-theme-font:minor-latin;
+  mso-hansi-font-family:Arial;
+  mso-hansi-theme-font:minor-latin;
+  mso-bidi-font-family:"Times New Roman";
+  mso-bidi-theme-font:minor-bidi;
+  color:#404040;
+  mso-themecolor:text1;
+  mso-themetint:191;
+  mso-font-kerning:1.0pt;
+  mso-ansi-language:EN-US;
+  mso-fareast-language:JA;}
+span.BalloonTextChar
+  {mso-style-name:"Balloon Text Char";
+  mso-style-noshow:yes;
+  mso-style-priority:99;
+  mso-style-unhide:no;
+  mso-style-locked:yes;
+  mso-style-link:"Balloon Text";
+  mso-ansi-font-size:8.0pt;
+  mso-bidi-font-size:8.0pt;
+  font-family:"Tahoma","sans-serif";
+  mso-ascii-font-family:Tahoma;
+  mso-hansi-font-family:Tahoma;
+  mso-bidi-font-family:Tahoma;}
+.MsoChpDefault
+  {mso-style-type:export-only;
+  mso-default-props:yes;
+  font-size:9.0pt;
+  mso-ansi-font-size:9.0pt;
+  mso-bidi-font-size:10.0pt;
+  mso-ascii-font-family:Arial;
+  mso-ascii-theme-font:minor-latin;
+  mso-fareast-font-family:Arial;
+  mso-fareast-theme-font:minor-latin;
+  mso-hansi-font-family:Arial;
+  mso-hansi-theme-font:minor-latin;
+  mso-bidi-font-family:"Times New Roman";
+  mso-bidi-theme-font:minor-bidi;
+  color:#404040;
+  mso-themecolor:text1;
+  mso-themetint:191;
+  mso-font-kerning:1.0pt;
+  mso-ansi-language:EN-US;
+  mso-fareast-language:JA;}
+.MsoPapDefault
+  {mso-style-type:export-only;
+  margin-bottom:8.0pt;}
+ /* Page Definitions */
+ @page
+  {mso-footnote-separator:url("invoiceform_files/header.htm") fs;
+  mso-footnote-continuation-separator:url("invoiceform_files/header.htm") fcs;
+  mso-endnote-separator:url("invoiceform_files/header.htm") es;
+  mso-endnote-continuation-separator:url("invoiceform_files/header.htm") ecs;}
+@page Section1
+  {size:612.0pt 792.0pt;
+  margin:54.0pt 72.0pt 108.0pt 72.0pt;
+  mso-header-margin:36.0pt;
+  mso-footer-margin:68.4pt;
+  mso-title-page:yes;
+  mso-footer:url("invoiceform_files/header.htm") f1;
+  mso-first-footer:url("invoiceform_files/header.htm") ff1;
+  mso-paper-source:0;}
+div.Section1
+  {page:Section1;}
+ @list l0
+  {mso-list-id:-119;
+  mso-list-type:simple;
+  mso-list-template-ids:-1462176598;}
+@list l0:level1
+  {mso-level-number-format:bullet;
+  mso-level-text:\F0B7;
+  mso-level-tab-stop:18.0pt;
+  mso-level-number-position:left;
+  margin-left:18.0pt;
+  text-indent:-18.0pt;
+  font-family:Symbol;}
+@list l1
+  {mso-list-id:1702780273;
+  mso-list-type:hybrid;
+  mso-list-template-ids:-1078045002 -547214106 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l1:level1
+  {mso-level-number-format:bullet;
+  mso-level-text:\F0B7;
+  mso-level-tab-stop:18.0pt;
+  mso-level-number-position:left;
+  margin-left:21.6pt;
+  text-indent:-14.4pt;
+  font-family:Symbol;
+  color:#5B9BD5;
+  mso-themecolor:accent1;}
+ol
+  {margin-bottom:0cm;}
+ul
+  {margin-bottom:0cm;}
+</style>
+<div class="Section1">
+<div style="border:none;border-left:double #1F4E79 6.75pt;padding:0cm 0cm 0cm 4.0pt">
+<p>[Date]</p>
+ </div>
+<p class="InvoiceHeading">INvoice #[OrderID]</p>
+<table class="InvoiceTable" style="width:100.0%;border-collapse:collapse;border:1px solid #000;padding:0cm 7.2pt 0cm 7.2pt" cellpadding="0" cellspacing="0" width="100%">
+ <tbody><tr>
+  <td style="width:50.0%;border:solid #5B9BD5 1.0pt;background:#DEEAF6;padding:0cm 7.2pt 0cm 7.2pt;vertical-align:bottom" width="50%">
+  <p style="margin:6.0pt 0cm 6.0pt 0cm"><strong>Bill To</strong></p>
+  </td>
+  <td style="width:50.0%;border:solid #5B9BD5 1.0pt;border-left:none;background:#DEEAF6;padding:0cm 7.2pt 0cm 7.2pt;vertical-align:bottom" width="50%">
+  <p style="margin:6.0pt 0cm 6.0pt 0cm"><strong>Ship To</strong></p>  </td>
+ </tr>
+ <tr>
+  <td style="width:50.0%;border:solid #5B9BD5 1.0pt;border-top:none;padding:0cm 7.2pt 0cm 7.2pt;vertical-align:top" width="50%">
+  <table style="width:100.0%;border-collapse:collapse;padding:0cm 0cm 0cm 0cm" cellpadding="0" cellspacing="0" width="100%">
+   <tbody><tr>
+    <td style="width:37.78%;padding:7.2pt 0cm 0cm 0cm;vertical-align:top" width="37%">
+    <p class="FormHeading">Customer</p>
+    </td>
+    <td style="width:62.22%;padding:7.2pt 0cm 0cm 0cm;vertical-align:top" width="62%">
+     <p class="FormText">[CustomerContact]<br>
+     [CustomerCompany]</p>
+    </td>
+   </tr>
+   <tr>
+    <td style="width:37.78%;padding:0cm 0cm 0cm 0cm;vertical-align:top" width="37%">
+    <p class="FormHeading">Customer ID#</p>
+    </td>
+     <td style="width:62.22%;padding:0cm 0cm 0cm 0cm;vertical-align:top" width="62%">
+     <p class="FormText">[CustomerID]</p>
+     </td>
+   </tr>
+   <tr>
+    <td style="width:37.78%;padding:0cm 0cm 0cm 0cm;vertical-align:top" width="37%">
+    <p class="FormHeading">Address</p>
+    </td>
+    <td style="width:62.22%;padding:0cm 0cm 0cm 0cm;vertical-align:top" width="62%">
+     <p class="FormText">[CustomerAddress]<br>
+     [CustomerCity], [CustomerState][CustomerZIP]</p>
+    </td>
+   </tr>
+   <tr>
+    <td style="width:37.78%;padding:0cm 0cm 0cm 0cm;vertical-align:top" width="37%">
+    <p class="FormHeading">Phone</p>
+    </td>
+     <td style="width:62.22%;padding:0cm 0cm 0cm 0cm;vertical-align:top" width="62%">
+     <p class="FormText">[CustomerPhone]</p>
+     </td>
+   </tr>
+  </tbody></table>
+  <br>
+  </td>
+  <td style="width:50.0%;border-top:none;border-left:none;border-bottom:solid #5B9BD5 1.0pt;border-right:solid #5B9BD5 1.0pt;padding:0cm 7.2pt 0cm 7.2pt;vertical-align:top" width="50%">
+  <table style="width:100.0%;border-collapse:collapse;padding:0cm 0cm 0cm 0cm" cellpadding="0" cellspacing="0" width="100%">   <tbody><tr>
+    <td style="width:37.78%;padding:7.2pt 0cm 0cm 0cm;vertical-align:top" width="37%">
+    <p class="FormHeading">Recipient</p>
+    </td>
+    <td style="width:62.22%;padding:7.2pt 0cm 0cm 0cm;vertical-align:top" width="62%">
+     <p class="FormText">[CustomerContact]<br>
+     [CustomerCompany]</p>
+    </td>
+   </tr>
+   <tr>
+    <td style="width:37.78%;padding:0cm 0cm 0cm 0cm;vertical-align:top" width="37%">
+    <p class="FormHeading">Address</p>
+    </td>
+    <td style="width:62.22%;padding:0cm 0cm 0cm 0cm;vertical-align:top" width="62%">
+     <p class="FormText">[ShipAddress]<br>
+     [ShipCity], [ShipState][ShipZip]</p>
+    </td>
+   </tr>
+   <tr>
+    <td style="width:37.78%;padding:0cm 0cm 0cm 0cm;vertical-align:top" width="37%">
+    <p class="FormHeading">Phone</p>
+    </td>
+     <td style="width:62.22%;padding:0cm 0cm 0cm 0cm;vertical-align:top" width="62%">
+     <p class="FormText">[CustomerPhone]</p>
+     </td>
+   </tr>
+  </tbody></table>
+  <br>
+  </td>
+ </tr>
+ <tr>
+  <td style="width:50.0%;border:solid #5B9BD5 1.0pt;border-top:none;padding:0cm 7.2pt 0cm 7.2pt;vertical-align:top" width="50%">
+  <table style="width:100.0%;border-collapse:collapse;padding:0cm 0cm 0cm 0cm" cellpadding="0" cellspacing="0" width="100%">
+   <tbody><tr>
+    <td style="width:37.78%;padding:7.2pt 0cm 0cm 0cm;vertical-align:top" width="37%">
+    <p class="FormHeading">Payment Due</p>
+    </td>
+     <td style="width:62.22%;padding:7.2pt 0cm 0cm 0cm;vertical-align:top" width="62%">
+     <p class="FormText">[PaymentDate]</p>
+     </td>
+   </tr>
+   <tr>
+    <td style="width:37.78%;padding:0cm 0cm 0cm 0cm;vertical-align:top" width="37%">
+    <p class="FormHeading">Salesperson</p>
+    </td>
+     <td style="width:62.22%;padding:0cm 0cm 0cm 0cm;vertical-align:top" width="62%">
+     <p class="FormText">[EmpLN]</p>
+     </td>
+   </tr>
+  </tbody></table>
+  <br>
+  </td>
+  <td style="width:50.0%;border-top:none;border-left:none;border-bottom:solid #5B9BD5 1.0pt;border-right:solid #5B9BD5 1.0pt;padding:0cm 7.2pt 0cm 7.2pt;vertical-align:top" width="50%">
+  <table style="width:100.0%;border-collapse:collapse;padding:0cm 0cm 0cm 0cm" cellpadding="0" cellspacing="0" width="100%">
+   <tbody><tr>
+    <td style="width:37.78%;padding:7.2pt 0cm 0cm 0cm;vertical-align:top" width="37%">
+    <p class="FormHeading">Delivery Date</p>
+    </td>
+     <td style="width:62.22%;padding:7.2pt 0cm 0cm 0cm;vertical-align:top" width="62%">
+     <p class="FormText">[ShippedDate]</p>
+     </td>
+   </tr>
+   <tr>
+    <td style="width:37.78%;padding:0cm 0cm 0cm 0cm;vertical-align:top" width="37%">
+    <p class="FormHeading">Ship Via</p>
+    </td>
+     <td style="width:62.22%;padding:0cm 0cm 0cm 0cm;vertical-align:top" width="62%">
+     <p class="FormText">[ShipVia]</p>
+     </td>
+   </tr>
+  </tbody></table>
+  <br>
+  </td>
+ </tr>
+</tbody></table>
+<p>&nbsp;</p>
+<table class="InvoiceTable" style="width:100.0%;border-collapse:collapse;border:1px solid #000;padding:0cm 7.2pt 0cm 7.2pt" cellpadding="0" cellspacing="0" width="100%">
+ <thead>
+  <tr>
+   <td style="width:6.86%;border:solid #5B9BD5 1.0pt;background:#DEEAF6;padding:0cm 7.2pt 0cm 7.2pt;vertical-align:bottom" width="6%">
+   <p style="text-align:center;margin:6.0pt 0cm 6.0pt 0cm"><strong>Qty.</strong></p>
+   </td>
+   <td style="width:8.14%;border:solid #5B9BD5 1.0pt;border-left:none;background:#DEEAF6;padding:0cm 7.2pt 0cm 7.2pt;vertical-align:bottom" width="8%">
+   <p style="text-align:center;margin:6.0pt 0cm 6.0pt 0cm"><strong>Item#</strong></p>
+   </td>
+   <td style="width:38.62%;border:solid #5B9BD5 1.0pt;border-left:none;background:#DEEAF6;padding:0cm 7.2pt 0cm 7.2pt;vertical-align:bottom" width="38%">
+   <p style="margin:6.0pt 0cm 6.0pt 0cm"><strong>Description</strong></p>
+   </td>
+   <td style="width:15.46%;border:solid #5B9BD5 1.0pt;border-left:none;background:#DEEAF6;padding:0cm 7.2pt 0cm 7.2pt;vertical-align:bottom" width="15%">
+   <p style="margin:6.0pt 0cm 6.0pt 0cm"><strong>Unit Price</strong></p>
+   </td>
+   <td style="width:15.46%;border:solid #5B9BD5 1.0pt;border-left:none;background:#DEEAF6;padding:0cm 7.2pt 0cm 7.2pt;vertical-align:bottom" width="15%">
+   <p style="margin:6.0pt 0cm 6.0pt 0cm"><strong>Discount</strong></p>
+   </td>
+   <td style="width:15.46%;border:solid #5B9BD5 1.0pt;border-left:none;background:#DEEAF6;padding:0cm 7.2pt 0cm 7.2pt;vertical-align:bottom" width="15%">
+   <p style="margin:6.0pt 0cm 6.0pt 0cm"><strong>Line Total</strong></p>
+   </td>
+  </tr>
+ </thead>
+<!--  [repeater] -->
+ <tbody><tr>
+  <td style="width:6.86%;border:solid #5B9BD5 1.0pt;border-top:none;padding:0cm 7.2pt 0cm 7.2pt;vertical-align:top" width="6%">  <p style="text-align:center;margin:6.0pt 0cm 6.0pt 0cm">&nbsp;</p>[Quantity]  </td>
+  <td style="width:8.14%;border-top:none;border-left:none;border-bottom:solid #5B9BD5 1.0pt;border-right:solid #5B9BD5 1.0pt;padding:0cm 7.2pt 0cm 7.2pt;vertical-align:top" width="8%">  <p style="text-align:center;margin:6.0pt 0cm 6.0pt 0cm">&nbsp;</p>[ProductID]  </td>
+  <td style="width:38.62%;border-top:none;border-left:none;border-bottom:solid #5B9BD5 1.0pt;border-right:solid #5B9BD5 1.0pt;padding:0cm 7.2pt 0cm 7.2pt;vertical-align:top" width="38%">  <p style="margin:6.0pt 0cm 6.0pt 0cm">&nbsp;</p>[ProductName]  </td>
+  <td style="width:15.46%;border-top:none;border-left:none;border-bottom:solid #5B9BD5 1.0pt;border-right:solid #5B9BD5 1.0pt;padding:0cm 7.2pt 0cm 7.2pt;vertical-align:top" width="15%">  <p style="text-align:right;margin:6.0pt 0cm 6.0pt 0cm">&nbsp;</p>[UnitPrice]  </td>
+  <td style="width:15.46%;border-top:none;border-left:none;border-bottom:solid #5B9BD5 1.0pt;border-right:solid #5B9BD5 1.0pt;padding:0cm 7.2pt 0cm 7.2pt;vertical-align:top" width="15%">  <p style="text-align:right;margin:6.0pt 0cm 6.0pt 0cm">&nbsp;</p>[Discount]  </td>
+  <td style="width:15.46%;border-top:none;border-left:none;border-bottom:solid #5B9BD5 1.0pt;border-right:solid #5B9BD5 1.0pt;padding:0cm 7.2pt 0cm 7.2pt;vertical-align:top" width="15%">  <p style="text-align:right;margin:6.0pt 0cm 6.0pt 0cm">&nbsp;</p>[LineTotal]  </td>
+ </tr>
+ <!-- [/repeater] -->
+ <tr>
+   <td style="width:6.86%;border:solid #5B9BD5 1.0pt;border-top:none;background:#5B9BD5;padding:0cm 7.2pt 0cm 7.2pt;vertical-align:top" width="6%">
+  <p style="text-align:right;margin:6.0pt 0cm 6.0pt 0cm"><strong><span style="color:#fffbf0">&nbsp;</span></strong></p>
+  </td>
+  <td style="width:8.14%;border-top:none;border-left:none;border-bottom:solid #5B9BD5 1.0pt;border-right:solid #5B9BD5 1.0pt;background:#5B9BD5;padding:0cm 7.2pt 0cm 7.2pt;vertical-align:top" width="8%">
+  <p style="text-align:right;margin:6.0pt 0cm 6.0pt 0cm"><strong><span style="color:#fffbf0">&nbsp;</span></strong></p>
+  </td>
+  <td style="width:38.62%;border-top:none;border-left:none;border-bottom:solid #5B9BD5 1.0pt;border-right:solid #5B9BD5 1.0pt;background:#5B9BD5;padding:0cm 7.2pt 0cm 7.2pt;vertical-align:top" width="38%">
+  <p style="text-align:right;margin:6.0pt 0cm 6.0pt 0cm"><strong><span style="color:#fffbf0">&nbsp;</span></strong></p>
+  </td>
+  <td style="width:15.46%;border-top:none;border-left:none;border-bottom:solid #5B9BD5 1.0pt;border-right:solid #5B9BD5 1.0pt;background:#5B9BD5;padding:0cm 7.2pt 0cm 7.2pt;vertical-align:top" width="15%">
+  <p style="text-align:right;margin:6.0pt 0cm 6.0pt 0cm"><strong><span style="color:#fffbf0">&nbsp;</span></strong></p>
+  </td>
+  <td style="width:15.46%;border-top:none;border-left:none;border-bottom:solid #5B9BD5 1.0pt;border-right:solid #5B9BD5 1.0pt;background:#5B9BD5;padding:0cm 7.2pt 0cm 7.2pt;vertical-align:top" width="15%">
+  <p style="text-align:right;margin:6.0pt 0cm 6.0pt 0cm"><strong><span style="color:#fffbf0">Total</span></strong></p>
+  </td>
+  <td style="width:15.46%;border-top:none;border-left:none;border-bottom:solid #5B9BD5 1.0pt;border-right:solid #5B9BD5 1.0pt;background:#5B9BD5;padding:0cm 7.2pt 0cm 7.2pt;vertical-align:top" width="15%">
+  <p style="text-align:left;margin:6.0pt 0cm 6.0pt 0cm"><strong><span style="color:#fffbf0">[LineTotal@Subtotal]</span></strong></p>
+  </td>
+ </tr>
+</tbody></table>
+<p>Thank you for your business!</p>
+</div>
+<p style="page-break-after:always">&nbsp;</p>

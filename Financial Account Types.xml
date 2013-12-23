@@ -1,0 +1,29 @@
+<ReportSet OwnerTenantID="" Version="6" ID="93e52d6c-a7ff-4a25-94ad-8345d62e9a44" DateModified="06/06/2013 01:37:21" Title="" ShowReportParameters="False" Description="" Header="" PageHeader="" CustomCss="" ReportSetType="ReportDesigner" ReadOnly="False" ViewOnly="False" InsertZeroValues="False" LandscapePrinting="False" FieldValueColumnPairs="2" ItemsPerPage="10000" AddBookmarkForVisualGroup="False" PageBreakAfterVisualGroups="False" Footer="" HeaderJustification="L" FooterJustification="L" TitleJustification="L" DescriptionJustification="L" HeaderImageJustification="L" CsvOnly="False" ShowVisualGroupLabels="False" Database="" UsePaginationInWebView="True" Distinct="True" ShowPageNumber="True" ShowDateTime="True" MinimizeGridWidth="True" VisualGroupStyle="CommaDelimited" CheckBoxDataSources="True" Schedule="2011-01-01 05:00:00" ScheduleTimeZome="-300" Recipients="" RepeatType="None" SendEmailAs="Link" UserName="DefaultAdministrator" Visibility="OnlyMe" Designer="AdHocReportDesigner" DrillDownKey="" ColumnsCount="2" FilterValue="None" MinDate="06/07/2013 01:36:31" MaxDate="06/05/2013 01:36:31">
+	<ReportVisibility>
+		<Property SharedWith="Everyone" Rights="None" />
+	</ReportVisibility>
+	<JoinedTables UseAutoConditions="True" AllowNulls="False">
+		<JoinedTable Name="[public].[financial_account]" Alias="" RightAlias="" JoinType="INNER" LeftConditionColumn="" RightConditionTable="" RightConditionColumn="" />
+	</JoinedTables>
+	<Report Title="" Code="" Name="Chart">
+		<Options Top="-2147483648" Distinct="True" StoreResults="False" SelectVisibleColumns="True" ChartTypeName="Pie" AddGrandTotals="False" AddPivotTotals="False" TotalsFunction="None" Invert="False" FieldValue="False" AddDeltas="False" LinesPerItem="1" ColumnsLimit="-1" ReportType="Chart" DashboardScroll="True" VisualGroupStyle="CommaDelimited" />
+		<Position X="0" Y="0" ColSpan="1" RowSpan="1" DbDsgn2Height="0" />
+		<Selections>
+			<Selection ColumnName="[public].[financial_account].[financialaccounttype]" ColumnSql="" Description="Label" Definition="" FormatString="{0}" GroupBy="False" OrderType="NONE" WidthSettedManually="False" Width="" Visible="True" Gradient="False" InsertZeroValues="False" AggregateFunction="GROUP" Justification="NotSet" LabelJustification="Center" Master="False" GaugeValuesInCurrencyFormat="False" Operator="None" AliasTable="" ShouldBeFormatted="True" TargetReport="" GaugeTargetReport="" GaugeTargetEffect="" Url="example:Page.aspx?id={0}&amp;value={1}" SubtotalTitle="" ValueString="" SubtotalFunction="DEFAULT" SubtotalExpression="" IsItalic="False" IsBold="False" Coefficient="" ColumnGroup="" />
+			<Selection ColumnName="[public].[financial_account].[financialaccount]" ColumnSql="" Description="Value" Definition="" FormatString="{0:#,0}" GroupBy="False" OrderType="DESC" WidthSettedManually="False" Width="" Visible="True" Gradient="False" InsertZeroValues="False" AggregateFunction="COUNT" Justification="NotSet" LabelJustification="Center" Master="False" GaugeValuesInCurrencyFormat="False" Operator="None" AliasTable="" ShouldBeFormatted="False" TargetReport="" GaugeTargetReport="" GaugeTargetEffect="" Url="example:Page.aspx?id={0}&amp;value={1}" SubtotalTitle="" ValueString="" SubtotalFunction="DEFAULT" SubtotalExpression="" IsItalic="False" IsBold="False" Coefficient="" ColumnGroup="" />
+		</Selections>
+		<ChartProperties>
+			<Property Name="ShowLegend" Value="False" />
+			<Property Name="ShowPercentage" Value="False" />
+			<Property Name="ShowValue" Value="False" />
+		</ChartProperties>
+	</Report>
+	<Report Title="" Code="" Name="Detail">
+		<Options Top="-2147483648" Distinct="True" StoreResults="False" SelectVisibleColumns="True" ChartTypeName="" AddGrandTotals="False" AddPivotTotals="False" TotalsFunction="None" Invert="False" FieldValue="False" AddDeltas="False" LinesPerItem="1" ColumnsLimit="-1" ReportType="Detail" DashboardScroll="True" VisualGroupStyle="CommaDelimited" />
+		<Position X="0" Y="4" ColSpan="1" RowSpan="1" DbDsgn2Height="0" />
+		<Selections>
+			<Selection ColumnName="[public].[financial_account].[financialaccounttype]" ColumnSql="" Description="Financialaccounttype" Definition="" FormatString="{0}" GroupBy="False" OrderType="NONE" WidthSettedManually="True" Width="" Visible="True" Gradient="False" InsertZeroValues="False" AggregateFunction="GROUP" Justification="NotSet" LabelJustification="Center" Master="False" GaugeValuesInCurrencyFormat="False" Operator="None" AliasTable="" ShouldBeFormatted="True" TargetReport="" GaugeTargetReport="" GaugeTargetEffect="" Url="example:Page.aspx?id={0}&amp;value={1}" SubtotalTitle="" ValueString="" SubtotalFunction="DEFAULT" SubtotalExpression="" IsItalic="False" IsBold="False" Highlight="example: 5 to 6:Blue;7 to 10:Red" Coefficient="" ValueRanges="example: 0 to 10:Under 10;10 to 100:10-100;100 to 10000:100+" ColumnGroup="" />
+			<Selection ColumnName="[public].[financial_account].[financialaccount]" ColumnSql="" Description="Count(Financialaccount)" Definition="" FormatString="{0:#,0}" GroupBy="False" OrderType="NONE" WidthSettedManually="True" Width="" Visible="True" Gradient="False" InsertZeroValues="False" AggregateFunction="COUNT" Justification="NotSet" LabelJustification="Center" Master="False" GaugeValuesInCurrencyFormat="False" Operator="None" AliasTable="" ShouldBeFormatted="True" TargetReport="" GaugeTargetReport="" GaugeTargetEffect="" Url="example:Page.aspx?id={0}&amp;value={1}" SubtotalTitle="" ValueString="" SubtotalFunction="DEFAULT" SubtotalExpression="" IsItalic="False" IsBold="False" Highlight="example: 5 to 6:Blue;7 to 10:Red" Coefficient="" ValueRanges="example: 0 to 10:Under 10;10 to 100:10-100;100 to 10000:100+" ColumnGroup="" />
+		</Selections>
+	</Report>
+</ReportSet>
