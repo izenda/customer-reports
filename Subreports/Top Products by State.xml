@@ -1,0 +1,33 @@
+<ReportSet OwnerTenantID="" Version="6" ID="3fcfcead-f1bb-4b1f-9a9a-c6f1f4c57280" DateModified="4/26/2013 7:25:27 AM" Title="" ShowReportParameters="False" Description="" Header="" PageHeader="" CustomCss="" ReportSetType="ReportDesigner" ReadOnly="False" ViewOnly="False" InsertZeroValues="False" LandscapePrinting="False" FieldValueColumnPairs="2" ItemsPerPage="10000" AddBookmarkForVisualGroup="False" PageBreakAfterVisualGroups="False" Footer="" HeaderJustification="L" FooterJustification="L" TitleJustification="L" DescriptionJustification="L" HeaderImageJustification="L" CsvOnly="False" ShowVisualGroupLabels="False" Database="" UsePaginationInWebView="True" Distinct="False" ShowPageNumber="True" ShowDateTime="True" MinimizeGridWidth="False" VisualGroupStyle="CommaDelimited" CheckBoxDataSources="False" Schedule="2008-01-01 00:00:00" ScheduleTimeZome="-1" Recipients="" RepeatType="None" SendEmailAs="Link" UserName="DefaultAdministrator" Visibility="OnlyMe" Designer="AdHocReportDesigner" DrillDownKey="[dbo].[Orders].[ShipRegion]" ColumnsCount="2" FilterValue="None" MinDate="10/9/2011 6:50:14 AM" MaxDate="10/7/2011 6:50:14 AM">
+	<ReportVisibility>
+		<Property SharedWith="Everyone" Rights="Read Only" />
+	</ReportVisibility>
+	<JoinedTables UseAutoConditions="False" AllowNulls="False">
+		<JoinedTable Name="[dbo].[Orders]" Alias="" RightAlias="" JoinType="LEFT_OUTER" LeftConditionColumn="" RightConditionTable="" RightConditionColumn="" />
+		<JoinedTable Name="[dbo].[Order Details]" Alias="" RightAlias="" JoinType="LEFT_OUTER" LeftConditionColumn="[dbo].[Order Details].[OrderID]" RightConditionTable="[dbo].[Orders]" RightConditionColumn="[dbo].[Orders].[OrderID]" />
+		<JoinedTable Name="[dbo].[Products]" Alias="" RightAlias="" JoinType="LEFT_OUTER" LeftConditionColumn="[dbo].[Products].[ProductID]" RightConditionTable="[dbo].[Order Details]" RightConditionColumn="[dbo].[Order Details].[ProductID]" />
+	</JoinedTables>
+	<Report Title="" Code="" Name="Chart">
+		<Options Top="5" Distinct="False" StoreResults="False" SelectVisibleColumns="True" ChartTypeName="Pie" AddGrandTotals="False" AddPivotTotals="False" TotalsFunction="None" Invert="False" FieldValue="False" AddDeltas="False" LinesPerItem="1" ColumnsLimit="-1" ReportType="Chart" DashboardScroll="True" VisualGroupStyle="CommaDelimited" />
+		<Position X="0" Y="0" ColSpan="1" RowSpan="1" DbDsgn2Height="0" />
+		<Selections>
+			<Selection ColumnName="[dbo].[Products].[ProductName]" ColumnSql="" Description="Label" Definition="" FormatString="" GroupBy="False" OrderType="NONE" WidthSettedManually="False" Width="60px" Visible="True" Gradient="False" InsertZeroValues="False" AggregateFunction="GROUP" Justification="NotSet" LabelJustification="Center" Master="False" GaugeValuesInCurrencyFormat="False" Operator="None" AliasTable="" ShouldBeFormatted="True" TargetReport="" GaugeTargetReport="" GaugeTargetEffect="" Url="example:Page.aspx?id={0}&amp;value={1}" SubtotalTitle="" ValueString="" SubtotalFunction="DEFAULT" SubtotalExpression="" IsItalic="False" IsBold="False" Coefficient="" ColumnGroup="" />
+			<Selection ColumnName="[dbo].[Order Details].[OrderID]" ColumnSql="" Description="Value" Definition="" FormatString="" GroupBy="False" OrderType="DESC" WidthSettedManually="False" Width="60px" Visible="True" Gradient="False" InsertZeroValues="False" AggregateFunction="COUNT_DISTINCT" Justification="NotSet" LabelJustification="Center" Master="False" GaugeValuesInCurrencyFormat="False" Operator="None" AliasTable="" ShouldBeFormatted="False" TargetReport="" GaugeTargetReport="" GaugeTargetEffect="" Url="example:Page.aspx?id={0}&amp;value={1}" SubtotalTitle="" ValueString="" SubtotalFunction="DEFAULT" SubtotalExpression="" IsItalic="False" IsBold="False" Coefficient="" ColumnGroup="" />
+		</Selections>
+		<ChartProperties>
+			<Property Name="ChartType" Value="Pie" />
+			<Property Name="CombineBottom" Value="0" />
+			<Property Name="CountInRow" Value="True" />
+			<Property Name="Effect" Value="Popup" />
+			<Property Name="ExplodeLargestSlice" Value="False" />
+			<Property Name="HiddenEffectField" Value="" />
+			<Property Name="ShowAs3D" Value="False" />
+			<Property Name="ShowLegend" Value="False" />
+			<Property Name="ShowPercentage" Value="False" />
+			<Property Name="ShowSliceLabels" Value="True" />
+			<Property Name="ShowValue" Value="True" />
+			<Property Name="TargetReport" Value="" />
+			<Property Name="ThirdMode" Value="True" />
+		</ChartProperties>
+	</Report>
+</ReportSet>

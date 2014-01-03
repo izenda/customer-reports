@@ -1,0 +1,34 @@
+<ReportSet OwnerTenantID="" Version="6" ID="744ad887-b1e0-44c3-8c64-09e69b883363" DateModified="4/26/2013 7:25:26 AM" Title="" ShowReportParameters="False" Description="" Header="" PageHeader="" CustomCss="" ReportSetType="ReportDesigner" ReadOnly="False" ViewOnly="False" InsertZeroValues="False" LandscapePrinting="False" FieldValueColumnPairs="2" ItemsPerPage="10000" AddBookmarkForVisualGroup="False" PageBreakAfterVisualGroups="False" Footer="" HeaderJustification="" FooterJustification="L" TitleJustification="L" DescriptionJustification="L" HeaderImageJustification="L" CsvOnly="False" ShowVisualGroupLabels="False" Database="" UsePaginationInWebView="True" Distinct="True" ShowPageNumber="True" ShowDateTime="True" MinimizeGridWidth="True" VisualGroupStyle="CommaDelimited" CheckBoxDataSources="True" Schedule="2010-01-01 00:00:00" ScheduleTimeZome="-180" Recipients="" RepeatType="None" SendEmailAs="Link" UserName="DefaultAdministrator" Visibility="OnlyMe" Designer="AdHocReportDesigner" DrillDownKey="" ColumnsCount="2" FilterValue="None" MinDate="9/15/2012 3:47:41 PM" MaxDate="9/13/2012 3:47:41 PM">
+	<ReportVisibility>
+		<Property SharedWith="Everyone" Rights="None" />
+	</ReportVisibility>
+	<JoinedTables UseAutoConditions="True" AllowNulls="False">
+		<JoinedTable Name="[dbo].[Employees]" Alias="" RightAlias="" JoinType="INNER" LeftConditionColumn="" RightConditionTable="" RightConditionColumn="" />
+		<JoinedTable Name="[dbo].[Orders]" Alias="" RightAlias="" JoinType="INNER" LeftConditionColumn="[dbo].[Orders].[EmployeeID]" RightConditionTable="[dbo].[Employees]" RightConditionColumn="[dbo].[Employees].[EmployeeID]" />
+	</JoinedTables>
+	<Report Title="Orders by Country by Employee" Code="" Name="Chart">
+		<Options Top="-2147483648" Distinct="True" StoreResults="False" SelectVisibleColumns="True" ChartTypeName="Pie" AddGrandTotals="False" AddPivotTotals="False" TotalsFunction="None" Invert="False" FieldValue="False" AddDeltas="False" LinesPerItem="1" ColumnsLimit="-1" ReportType="Chart" DashboardScroll="True" VisualGroupStyle="CommaDelimited" />
+		<Position X="0" Y="0" ColSpan="1" RowSpan="1" DbDsgn2Height="0" />
+		<Selections>
+			<Selection ColumnName="[dbo].[Orders].[ShipCountry]" ColumnSql="" Description="Label" Definition="" FormatString="" GroupBy="False" OrderType="NONE" WidthSettedManually="False" Width="" Visible="True" Gradient="False" InsertZeroValues="False" AggregateFunction="GROUP" Justification="NotSet" LabelJustification="Center" Master="False" GaugeValuesInCurrencyFormat="False" Operator="None" AliasTable="" ShouldBeFormatted="True" TargetReport="" GaugeTargetReport="" GaugeTargetEffect="" Url="example:Page.aspx?id={0}&amp;value={1}" SubtotalTitle="" ValueString="" SubtotalFunction="DEFAULT" SubtotalExpression="" IsItalic="False" IsBold="False" Coefficient="" ColumnGroup="" />
+			<Selection ColumnName="[dbo].[Orders].[OrderID]" ColumnSql="" Description="Value" Definition="" FormatString="" GroupBy="False" OrderType="DESC" WidthSettedManually="False" Width="" Visible="True" Gradient="False" InsertZeroValues="False" AggregateFunction="COUNT_DISTINCT" Justification="NotSet" LabelJustification="Center" Master="False" GaugeValuesInCurrencyFormat="False" Operator="None" AliasTable="" ShouldBeFormatted="False" TargetReport="" GaugeTargetReport="" GaugeTargetEffect="" Url="example:Page.aspx?id={0}&amp;value={1}" SubtotalTitle="" ValueString="" SubtotalFunction="DEFAULT" SubtotalExpression="" IsItalic="False" IsBold="False" Coefficient="" ColumnGroup="" />
+			<Selection ColumnName="[dbo].[Employees].[LastName]" ColumnSql="" Description="Separator" Definition="" FormatString="" GroupBy="False" OrderType="NONE" WidthSettedManually="False" Width="" Visible="True" Gradient="False" InsertZeroValues="False" AggregateFunction="GROUP" Justification="NotSet" LabelJustification="Center" Master="False" GaugeValuesInCurrencyFormat="False" Operator="None" AliasTable="" ShouldBeFormatted="True" TargetReport="" GaugeTargetReport="" GaugeTargetEffect="" Url="example:Page.aspx?id={0}&amp;value={1}" SubtotalTitle="" ValueString="" SubtotalFunction="DEFAULT" SubtotalExpression="" IsItalic="False" IsBold="False" Coefficient="" ColumnGroup="" />
+		</Selections>
+		<ChartProperties>
+			<Property Name="ChartType" Value="Pie" />
+			<Property Name="CombineBottom" Value="10" />
+			<Property Name="CountInRow" Value="True" />
+			<Property Name="Effect" Value="Popup" />
+			<Property Name="ExplodeLargestSlice" Value="False" />
+			<Property Name="HiddenEffectField" Value="" />
+			<Property Name="Scale" Value="300" />
+			<Property Name="ShowAs3D" Value="False" />
+			<Property Name="ShowLegend" Value="False" />
+			<Property Name="ShowPercentage" Value="False" />
+			<Property Name="ShowSliceLabels" Value="True" />
+			<Property Name="ShowValue" Value="True" />
+			<Property Name="TargetReport" Value="" />
+			<Property Name="ThirdMode" Value="True" />
+		</ChartProperties>
+	</Report>
+</ReportSet>
