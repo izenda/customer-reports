@@ -16,6 +16,14 @@
     text-align: left;
   }
   
+  .span-3-rows {
+    rowspan: 3;
+  }
+
+  .span-8-cols {
+    colspan: 8;
+   }
+
   .sectionA {
     clear: both;
     padding: 20px 0;
@@ -111,5 +119,59 @@
         </table>
       </div>
     </div>
+  </div>
+
+  <div class="sectionB">
+    <table>
+      <tbody>
+        <tr>
+          <th>Survey</th>
+          <th>Scope</th>
+          <th>Job Title/Code</th>
+          <th>Wgt</th>
+          <th>Adj</th>
+          <th>Page</th>
+          <th>Cos</th>
+          <th>Inc</th>
+          <th>Survey Pay Type</th>
+          <th>50thptile</th>
+          <th>75thptile</th>
+          <th>90thptile</th>
+        </tr>
+
+        <tr>
+          <td class="span-3-rows">Survey Here</td>
+          <td class="span-3-rows">Scope Here</td>
+          <td class="span-3-rows">Job title here</td>
+          <td class="span-3-rows">Wgt here</td>
+          <td class="span-3-rows">Adj here</td>
+          <td class="span-3-rows">Page here</td>
+          <td class="span-3-rows">Cos here</td>
+          <td class="span-3-rows">Inc here</td>
+          <td>Pay type 1 here</td>
+          <td>50th ptile 1 here</td>
+          <td>75th ptile 1 here</td>
+          <td>90th ptile 1 here</td>
+        </tr>
+
+        <tr>
+          <td>Pay type 2 here</td>
+          <td>50th ptile 2 here</td>
+          <td>75th ptile 2 here</td>
+          <td>90th ptile 2 here</td>
+        </tr>
+
+        <tr>
+          <td>Pay type 3 here</td>
+          <td>50th ptile 3 here</td>
+          <td>75th ptile 3 here</td>
+          <td>90th ptile 3 here</td>
+        </tr>
+
+        <tr>
+          <td class="span-8-cols">Long text string here</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
