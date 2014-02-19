@@ -20,6 +20,10 @@
     vertical-align: top;
   }
 
+  .container {
+    page-break-after: always;
+  }
+
   .sectionA {
     clear: both;
     padding: 20px 0;
@@ -30,6 +34,14 @@
     clear:  both;
   }
   
+  .sectionB td {
+    vertical-align: top;
+  }
+
+  .sectionB table {
+    width: 100%;
+  }
+
 </style>
 
 <div class="container">
@@ -141,14 +153,14 @@
         <!-- [repeater] -->
 
         <tr>
-          <td class="span-3-rows" rowspan=3>TEST [ProductID]</td>
-          <td class="span-3-rows" rowspan=3>Scope Here</td>
-          <td class="span-3-rows" rowspan=3>Job title here</td>
-          <td class="span-3-rows" rowspan=3>Wgt here</td>
-          <td class="span-3-rows" rowspan=3>Adj here</td>
-          <td class="span-3-rows" rowspan=3>Page here</td>
-          <td class="span-3-rows" rowspan=3>Cos here</td>
-          <td class="span-3-rows" rowspan=3>Inc here</td>
+          <td rowspan=3>TEST [ProductID]</td>
+          <td rowspan=3>Scope Here</td>
+          <td rowspan=3>Job title here</td>
+          <td rowspan=3>Wgt here</td>
+          <td rowspan=3>Adj here</td>
+          <td rowspan=3>Page here</td>
+          <td rowspan=3>Cos here</td>
+          <td rowspan=3>Inc here</td>
           <td>Pay type 1 here</td>
           <td>50th ptile 1 here</td>
           <td>75th ptile 1 here</td>
