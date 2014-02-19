@@ -15,14 +15,6 @@
   td {
     text-align: left;
   }
-  
-  .span-3-rows {
-    rowspan: 3;
-  }
-
-  .span-8-cols {
-    colspan: 8;
-   }
 
   .sectionA {
     clear: both;
@@ -140,14 +132,14 @@
         </tr>
 
         <tr>
-          <td class="span-3-rows">Survey Here</td>
-          <td class="span-3-rows">Scope Here</td>
-          <td class="span-3-rows">Job title here</td>
-          <td class="span-3-rows">Wgt here</td>
-          <td class="span-3-rows">Adj here</td>
-          <td class="span-3-rows">Page here</td>
-          <td class="span-3-rows">Cos here</td>
-          <td class="span-3-rows">Inc here</td>
+          <td rowspan=3>Survey Here</td>
+          <td rowspan=3>Scope Here</td>
+          <td rowspan=3>Job title here</td>
+          <td rowspan=3>Wgt here</td>
+          <td rowspan=3>Adj here</td>
+          <td rowspan=3>Page here</td>
+          <td rowspan=3>Cos here</td>
+          <td rowspan=3>Inc here</td>
           <td>Pay type 1 here</td>
           <td>50th ptile 1 here</td>
           <td>75th ptile 1 here</td>
@@ -169,7 +161,7 @@
         </tr>
 
         <tr>
-          <td class="span-8-cols">Long text string here</td>
+          <td colspan=8>Long text string here</td>
         </tr>
       </tbody>
     </table>
