@@ -8,7 +8,7 @@
     padding-right: 10px;
   }
   
-  th.struct_attrs {
+  .struct_attrs {
     border-bottom: 1px solid;
   }
   
@@ -17,7 +17,7 @@
   }
 
   div {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 
   .span-3-rows {
@@ -29,8 +29,7 @@
   }
 
   .sectionA {
-    padding: 20px 0;
-    height: 40%;
+    height: 25%;
   }
   
   .sectionB {
@@ -38,7 +37,7 @@
   }
   
   .sectionC {
-
+    height: 30%;
   }
 
   .sectionB td {
@@ -89,7 +88,7 @@
 
     <div style="float: right; width: 50%">
       <div style="height: 40%">
-        <table style="width: 100%">
+        <table style="width: 80%; margin-left: auto;">
           <tbody>
             <tr>
               <th class="struct_attrs">Structure</th>
@@ -100,18 +99,18 @@
             </tr>
 
             <tr>
-              <td>Structure Here</td>
-              <td>Grade Here</td>
-              <td>Min Here</td>
-              <td>Mid Here</td>
-              <td>Max Here</td>
+              <td>Struct</td>
+              <td>Grade</td>
+              <td>Min</td>
+              <td>Mid</td>
+              <td>Max</td>
             </tr>
           </tbody>
         </table>
       </div>
 
       <div style="height: 50%">
-        <table style="width: 100%">
+        <table style="width: 70%; margin-left: auto;">
           <tbody>
             <tr>
               <th class="struct_attrs">Pay</th>
@@ -122,16 +121,16 @@
 
             <tr>
               <th>Payset Base</th>
-              <td>Low base here</td>
-              <td>avg base here</td>
-              <td>high base here</td>
+              <td>Lowbase</td>
+              <td>avgbase</td>
+              <td>highbase</td>
             </tr>
 
             <tr>
               <th>PaySet Total</th>
-              <td>low total here</td>
-              <td>avg total here</td>
-              <td>high total here</td>
+              <td>lowtotal</td>
+              <td>avgtotal</td>
+              <td>hightotal</td>
             </tr>
           </tbody>
         </table>
@@ -168,24 +167,24 @@
           <td rowspan=3>Page here</td>
           <td rowspan=3>Cos here</td>
           <td rowspan=3>Inc here</td>
-          <td>Pay type 1 here</td>
-          <td>50th ptile 1 here</td>
-          <td>75th ptile 1 here</td>
-          <td>90th ptile 1 here</td>
+          <td>Pay 1</td>
+          <td>50th 1</td>
+          <td>75th 1</td>
+          <td>90th 1</td>
         </tr>
 
         <tr>
-          <td>Pay type 2 here</td>
-          <td>50th ptile 2 here</td>
-          <td>75th ptile 2 here</td>
-          <td>90th ptile 2 here</td>
+          <td>Pay 2</td>
+          <td>50th 2</td>
+          <td>75th 2</td>
+          <td>90th 2</td>
         </tr>
 
         <tr>
-          <td>Pay type 3 here</td>
-          <td>50th ptile 3 here</td>
-          <td>75th ptile 3 here</td>
-          <td>90th ptile 3 here</td>
+          <td>Pay 3</td>
+          <td>50th 3</td>
+          <td>75th 3</td>
+          <td>90th 3</td>
         </tr>
 
         <!-- [repeater] -->
@@ -195,5 +194,89 @@
         </tr>
       </tbody>
     </table>
+  </div>
+
+  <div class="sectionC">
+    <table style="float: left">
+      <tbody>
+        <tr>
+          <th class="job_attrs">Job Title</th>
+          <td>Title Here</td>
+        </tr>
+
+        <tr>
+          <th class="job_attrs">Job Code</th>
+          <td>[OrderID]</td>
+        </tr>
+
+        <tr>
+          <th class="job_attrs">Quantifier</th>
+          <td>Quantifier Here</td>
+        </tr>
+
+        <tr>
+          <th class="job_attrs">Region</th>
+          <td>[ShipCountry]</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="float: right; width: 50%">
+      <div style="height: 40%">
+        <h3 style="float: left">Payset Base</h3>
+        <table style="margin-left: auto; width: 70%">
+          <tbody>
+            <tr>
+              <th style="text-align: left">Market</th>
+              <td>BaseM1</td>
+              <td>BaseM2</td>
+              <td>BaseM3</td>
+            </tr>
+
+            <tr>
+              <th style="text-align: left">Pay</th>
+              <td class="struct_attrs">BaseP1</td>
+              <td class="struct_attrs">BaseP2</td>
+              <td class="struct_attrs">BaseP3</td>
+            </tr>
+
+            <tr>
+              <th></th>
+              <td>Base%1</td>
+              <td>Base%2</td>
+              <td>Base%3</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="height: 40%; line-height: 1">
+        <h3 style="float: left; vertical-align: top">Payset Total</h3>
+        <table style="margin-left: auto; width: 70%">
+          <tbody>
+            <tr>
+              <th style="text-align: left">Market</th>
+              <td>TMark1</td>
+              <td>TMark2</td>
+              <td>TMark3</td>
+            </tr>
+
+            <tr>
+              <th style="text-align: left">Pay</th>
+              <td class="struct_attrs">TPay1</td>
+              <td class="struct_attrs">TPay2</td>
+              <td class="struct_attrs">TPay3</td>
+            </tr>
+
+            <tr>
+              <th></th>
+              <td>Total1</td>
+              <td>Total2</td>
+              <td>Total3</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </div>
