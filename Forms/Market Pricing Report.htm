@@ -1,4 +1,26 @@
 <style type="text/css">
+  table.float_left {
+    float: left;
+    width: 60%;
+  }
+
+  .align_left {
+    text-align: left;
+  }
+
+  table.float_right {
+    float: right;
+    width: 40%;
+  }
+
+  .float_right th {
+    width: 25%;
+  }
+
+  .align_right {
+    text-align: right;
+  }
+
   th {
     font-weight: bold; 
   }
@@ -20,8 +42,8 @@
     margin-bottom: 10px;
   }
 
-  .span-3-rows {
-    vertical-align: top;
+  .clear_both {
+    clear: both;
   }
 
   .container {
@@ -34,31 +56,26 @@
   }
   .sectionA {
     height: 25%;
-    clear: both;
   }
   
   .sectionB {
-    clear: both;  
   }
   
   .sectionB td {
     vertical-align: top;
   }
 
-  .sectionB table {
-    width: 100%;
-  }
-
   .sectionC {
     height: 30%;
-    clear: both;
+  }
+
+  .sectionD {
   }
 
   .report_header {
     text-align: center;
     margin-top: 0;
   }
-
 </style>
 
 <div class="container">
@@ -80,47 +97,47 @@
       <tbody>
         <tr>
           <td style="width: 25%">Page:</td>
-          <td style="width: 75%">Page#</td>
+          <td style="width: 75%">[PageNumber] / [TotalPages]</td>
         </tr>
 
         <tr>
           <td>Date:</td>
-          <td>Date</td>
+          <td>[Date]</td>
         </tr>
       </tbody>
     </table>
   </div>
-  <div class="sectionA">
+  <div class="sectionA clear_both">
     <table style="float: left">
       <tbody>
         <tr>
           <th class="job_attrs">Job Title</th>
-          <td>Title Here</td>
+          <td>[JobTitle]</td>
         </tr>
 
         <tr>
           <th class="job_attrs">Job Code</th>
-          <td>[OrderID]</td>
+          <td>[JobID]</td>
         </tr>
 
         <tr>
           <th class="job_attrs">Quantifier</th>
-          <td>Quantifier Here</td>
+          <td>[Quantifier]</td>
         </tr>
 
         <tr>
           <th class="job_attrs">Region</th>
-          <td>[ShipCountry]</td>
+          <td>[Region]</td>
         </tr>
 
         <tr>
           <th class="job_attrs">EEs</th>
-          <td>EEs Here</td>
+          <td>[Ees]</td>
         </tr>
 
         <tr>
           <th class="job_attrs">Job Family</th>
-          <td>Job Family Here</td>
+          <td>[JobFamily]</td>
         </tr>
       </tbody>
     </table>
@@ -138,11 +155,11 @@
             </tr>
 
             <tr>
-              <td>Struct</td>
-              <td>Grade</td>
-              <td>Min</td>
-              <td>Mid</td>
-              <td>Max</td>
+              <td>[Structure]</td>
+              <td>[Grade]</td>
+              <td>[Min]</td>
+              <td>[Mid]</td>
+              <td>[Max]</td>
             </tr>
           </tbody>
         </table>
@@ -151,8 +168,8 @@
     </div>
   </div>
 
-  <div class="sectionB">
-    <table>
+  <div class="sectionB clear_both">
+    <table class="float_left align_left">
       <tbody>
         <tr>
           <th>Survey</th>
@@ -163,73 +180,71 @@
           <th>Page</th>
           <th>Cos</th>
           <th>Inc</th>
+        </tr>
+
+        <!-- [repeater] -->
+
+        <tr>
+          <td rowspan="3">[Survey]</td>
+          <td rowspan="3">[Scope]</td>
+          <td rowspan="3">[JobTitle]</td>
+          <td rowspan="3">[Wgt]</td>
+          <td rowspan="3">[Adj]</td>
+          <td rowspan="3">[Page]</td>
+          <td rowspan="3">[Cos]</td>
+          <td rowspan="3">[Inc]</td>
+        </tr>
+
+        <tr>
+          <td colspan="8">[longString]</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- [/repeater] -->
+
+    <table class="float_right align_right">
+      <tbody>
+        <tr>
           <th>Survey Pay Type</th>
           <th>50thptile</th>
           <th>75thptile</th>
           <th>90thptile</th>
         </tr>
 
-        <!-- [repeater] -->
-
         <tr>
-          <td rowspan="3">TEST [ProductID]</td>
-          <td rowspan="3">Scope Here</td>
-          <td rowspan="3">Job title here</td>
-          <td rowspan="3">Wgt here</td>
-          <td rowspan="3">Adj here</td>
-          <td rowspan="3">Page here</td>
-          <td rowspan="3">Cos here</td>
-          <td rowspan="3">Inc here</td>
-          <td>Pay 1</td>
-          <td>50th 1</td>
-          <td>75th 1</td>
-          <td>90th 1</td>
-        </tr>
-
-        <tr>
-          <td>Pay 2</td>
-          <td>50th 2</td>
-          <td>75th 2</td>
-          <td>90th 2</td>
-        </tr>
-
-        <tr>
-          <td>Pay 3</td>
-          <td>50th 3</td>
-          <td>75th 3</td>
-          <td>90th 3</td>
-        </tr>
-
-        <!-- [/repeater] -->
-
-        <tr>
-          <td colspan="8">Long text string here</td>
+          <!-- a repeater will go here eventually, contained within the section B repeater -->
+          <td>[PayType]</td>
+          <td>[percentile1]</td>
+          <td>[percentile2]</td>
+          <td>[percentile3]</td>
+          <!-- subreport B has a dynamic number of rows based on paytype plus a fixed summary row -->
         </tr>
       </tbody>
     </table>
   </div>
 
-  <div class="sectionC">
+  <div class="sectionC clear_both">
     <table style="float: left">
       <tbody>
         <tr>
           <th class="job_attrs">Job Title</th>
-          <td>Title Here</td>
+          <td>[JobTitle]</td>
         </tr>
 
         <tr>
           <th class="job_attrs">Job Code</th>
-          <td>[OrderID]</td>
+          <td>[JobID]</td>
         </tr>
 
         <tr>
           <th class="job_attrs">Quantifier</th>
-          <td>Quantifier Here</td>
+          <td>[Quantifier]</td>
         </tr>
 
         <tr>
           <th class="job_attrs">Region</th>
-          <td>[ShipCountry]</td>
+          <td>[Region]</td>
         </tr>
       </tbody>
     </table>
@@ -241,16 +256,16 @@
           <tbody>
             <tr>
               <th style="text-align: left">Market</th>
-              <td>BaseM1</td>
-              <td>BaseM2</td>
-              <td>BaseM3</td>
+              <td>[BaseMarket1]</td>
+              <td>[BaseMarket2]</td>
+              <td>[BaseMarket3]</td>
             </tr>
 
             <tr>
               <th style="text-align: left">Pay</th>
-              <td class="struct_attrs">BaseP1</td>
-              <td class="struct_attrs">BaseP2</td>
-              <td class="struct_attrs">BaseP3</td>
+              <td class="struct_attrs">[BasePay1]</td>
+              <td class="struct_attrs">[BasePay2]</td>
+              <td class="struct_attrs">[BasePay3]</td>
             </tr>
 
             <tr>
@@ -269,16 +284,16 @@
           <tbody>
             <tr>
               <th style="text-align: left">Market</th>
-              <td>TMark1</td>
-              <td>TMark2</td>
-              <td>TMark3</td>
+              <td>[TotalMarket1]</td>
+              <td>[TotalMarket2]</td>
+              <td>[TotalMarket3]</td>
             </tr>
 
             <tr>
               <th style="text-align: left">Pay</th>
-              <td class="struct_attrs">TPay1</td>
-              <td class="struct_attrs">TPay2</td>
-              <td class="struct_attrs">TPay3</td>
+              <td class="struct_attrs">[TotalPay1]</td>
+              <td class="struct_attrs">[TotalPay2]</td>
+              <td class="struct_attrs">[TotalPay3]</td>
             </tr>
 
             <tr>
@@ -292,11 +307,11 @@
       </div>
     </div>
   </div>
-
-  <div class="sectionD">
+<!-- should probably put this in a separate subreport file also-->
+  <div class="sectionD clear_both">
     <h4 style="margin-right: auto">Incumbents</h4>
     <div style="width: 25%; float: left">
-      [ID] TEST
+      [EmployeeCode] [EmployeeName]
     </div>
   </div>
 </div>
