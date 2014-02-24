@@ -9,9 +9,14 @@
     text-align: left;
   }
 
-  table.float_right {
+  .float_right {
     float: right;
     width: 40%;
+    text-align: right;
+  }
+
+  .float_right table {
+    width: 100%;
   }
 
   .float_right th {
@@ -35,8 +40,9 @@
     padding-right: 10px;
   }
   
-  .struct_attrs {
+  .bottom-border {
     border-bottom: 1px solid;
+    width: 20%;
   }
   
   td {
@@ -147,16 +153,16 @@
       </tbody>
     </table>
 
-    <div style="float: right; width: 50%">
+    <div class="float_right">
       <div style="height: 40%">
-        <table style="width: 80%; margin-left: auto;">
+        <table>
           <tbody>
             <tr>
-              <th class="struct_attrs">Structure</th>
-              <th class="struct_attrs">Grade</th>
-              <th class="struct_attrs">Min</th>
-              <th class="struct_attrs">Mid</th>
-              <th class="struct_attrs">Max</th>
+              <th class="bottom-border">Structure</th>
+              <th class="bottom-border">Grade</th>
+              <th class="bottom-border">Min</th>
+              <th class="bottom-border">Mid</th>
+              <th class="bottom-border">Max</th>
             </tr>
 
             <tr>
@@ -209,8 +215,6 @@
       </tbody>
     </table>
 
-
-
     <table class="float_right align_right">
       <tbody>
         <tr>
@@ -257,23 +261,22 @@
       </tbody>
     </table>
 
-    <div style="float: right; width: 50%">
+    <div class="float_right">
       <div style="height: 40%">
-        <h3 style="float: left">Payset Base</h3>
-        <table style="margin-left: auto; width: 70%">
+        <table>
           <tbody>
             <tr>
-              <th>Market</th>
+              <th style="width: 40%">Market</th>
               <td>[BaseMarket1]</td>
               <td>[BaseMarket2]</td>
               <td>[BaseMarket3]</td>
             </tr>
 
             <tr>
-              <th>Pay</th>
-              <td class="struct_attrs">[BasePay1]</td>
-              <td class="struct_attrs">[BasePay2]</td>
-              <td class="struct_attrs">[BasePay3]</td>
+              <th style="width: 40%">Pay</th>
+              <td class="bottom-border">[BasePay1]</td>
+              <td class="bottom-border">[BasePay2]</td>
+              <td class="bottom-border">[BasePay3]</td>
             </tr>
 
             <tr>
@@ -286,22 +289,21 @@
         </table>
       </div>
 
-      <div style="height: 40%; line-height: 1">
-        <h3 style="float: left; vertical-align: top">Payset Total</h3>
-        <table style="margin-left: auto; width: 70%">
+      <div style="height: 40%">
+        <table>
           <tbody>
             <tr>
-              <th style="text-align: left">Market</th>
+              <th style="width: 40%">Market</th>
               <td>[TotalMarket1]</td>
               <td>[TotalMarket2]</td>
               <td>[TotalMarket3]</td>
             </tr>
 
             <tr>
-              <th style="text-align: left">Pay</th>
-              <td class="struct_attrs">[TotalPay1]</td>
-              <td class="struct_attrs">[TotalPay2]</td>
-              <td class="struct_attrs">[TotalPay3]</td>
+              <th style="width: 40%">Pay</th>
+              <td class="bottom-border">[TotalPay1]</td>
+              <td class="bottom-border">[TotalPay2]</td>
+              <td class="bottom-border">[TotalPay3]</td>
             </tr>
 
             <tr>
@@ -314,7 +316,17 @@
         </table>
       </div>
     </div>
+
+    <div class="float_right">
+      <div style="height: 40%">
+        <h3>Payset Base</h3>
+      </div>
+      <div style="height: 40%">
+        <h3>Payset Total</h3>
+      </div>
+    </div>
   </div>
+
 <!-- should probably put this in a separate subreport file also-->
   <div class="sectionD clear_both">
     <h4 style="margin-right: auto">Incumbents</h4>
