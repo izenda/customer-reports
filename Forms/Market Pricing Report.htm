@@ -2,6 +2,7 @@
   table.float_left {
     float: left;
     width: 60%;
+    text-align; left;
   }
 
   .align_left {
@@ -14,7 +15,11 @@
   }
 
   .float_right th {
-    width: 25%;
+    width: 20%;
+  }
+
+  .float_right td {
+    text-align: right;
   }
 
   .align_right {
@@ -169,7 +174,7 @@
   </div>
 
   <div class="sectionB clear_both">
-    <table class="float_left align_left">
+    <table class="float_left">
       <tbody>
         <tr>
           <th>Survey</th>
@@ -182,31 +187,34 @@
           <th>Inc</th>
         </tr>
 
-        <!-- [repeater] -->
+	<!--repeater-->
 
         <tr>
-          <td rowspan="3">[Survey]</td>
-          <td rowspan="3">[Scope]</td>
-          <td rowspan="3">[JobTitle]</td>
-          <td rowspan="3">[Wgt]</td>
-          <td rowspan="3">[Adj]</td>
-          <td rowspan="3">[Page]</td>
-          <td rowspan="3">[Cos]</td>
-          <td rowspan="3">[Inc]</td>
+          <td>[Survey]</td>
+          <td>[Scope]</td>
+          <td>[JobTitle]</td>
+          <td>[Wgt]</td>
+          <td>[Adj]</td>
+          <td>[Page]</td>
+          <td>[Cos]</td>
+          <td>[Inc]</td>
         </tr>
 
         <tr>
           <td colspan="8">[longString]</td>
         </tr>
+
+	<!--/repeater-->
+
       </tbody>
     </table>
 
-    <!-- [/repeater] -->
+
 
     <table class="float_right align_right">
       <tbody>
         <tr>
-          <th>Survey Pay Type</th>
+          <th style="width: 40%">Survey Pay Type</th>
           <th>50thptile</th>
           <th>75thptile</th>
           <th>90thptile</th>
@@ -255,14 +263,14 @@
         <table style="margin-left: auto; width: 70%">
           <tbody>
             <tr>
-              <th style="text-align: left">Market</th>
+              <th>Market</th>
               <td>[BaseMarket1]</td>
               <td>[BaseMarket2]</td>
               <td>[BaseMarket3]</td>
             </tr>
 
             <tr>
-              <th style="text-align: left">Pay</th>
+              <th>Pay</th>
               <td class="struct_attrs">[BasePay1]</td>
               <td class="struct_attrs">[BasePay2]</td>
               <td class="struct_attrs">[BasePay3]</td>
@@ -314,4 +322,6 @@
       [EmployeeCode] [EmployeeName]
     </div>
   </div>
+
+  <br>
 </div>
