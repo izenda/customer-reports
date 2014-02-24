@@ -1,8 +1,16 @@
 <style type="text/css">
-  table.float_left {
+  html {
+    font-size: .8em;
+  }
+
+  .float_left {
     float: left;
-    width: 60%;
+    width: 68%;
     text-align; left;
+  }
+
+  .float_left th {
+    margin: 0 1%;
   }
 
   .align_left {
@@ -11,7 +19,7 @@
 
   .float_right {
     float: right;
-    width: 40%;
+    width: 32%;
     text-align: right;
   }
 
@@ -20,14 +28,29 @@
   }
 
   .float_right th {
-    width: 20%;
+    width: 25%;
   }
 
   .float_right td {
     text-align: right;
+    width: 25%;
   }
 
-  .align_right {
+  .float_right_40 {
+    float: right;
+    width: 40%;
+    text-align: right;
+  }
+
+  .float_right_40 table {
+    width: 100%;
+  }
+
+  .float_right_40 th {
+    width: 20%;
+  }
+
+  .float_right_40 td {
     text-align: right;
   }
 
@@ -67,6 +90,7 @@
   }
   .sectionA {
     height: 25%;
+    margin-bottom: 10px;
   }
   
   .sectionB {
@@ -83,9 +107,17 @@
   .sectionD {
   }
 
+  .sectionD h4 {
+    margin: 5px;
+  }
+
   .report_header {
     text-align: center;
     margin-top: 0;
+  }
+
+  hr {
+    margin: 0;
   }
 </style>
 
@@ -118,7 +150,9 @@
       </tbody>
     </table>
   </div>
+
   <div class="sectionA clear_both">
+    <hr>
     <table style="float: left">
       <tbody>
         <tr>
@@ -153,7 +187,7 @@
       </tbody>
     </table>
 
-    <div class="float_right">
+    <div class="float_right_40">
       <div style="height: 40%">
         <table>
           <tbody>
@@ -175,11 +209,12 @@
           </tbody>
         </table>
       </div>
-      [[SubReports/SubReport A]]
+      [[Subreports/SubReport A]]
     </div>
   </div>
 
   <div class="sectionB clear_both">
+    <br><hr>
     <table class="float_left">
       <tbody>
         <tr>
@@ -215,10 +250,10 @@
       </tbody>
     </table>
 
-    <table class="float_right align_right">
+    <table class="float_right">
       <tbody>
         <tr>
-          <th style="width: 40%">Survey Pay Type</th>
+          <th>Survey Pay Type</th>
           <th>50thptile</th>
           <th>75thptile</th>
           <th>90thptile</th>
@@ -237,6 +272,7 @@
   </div>
 
   <div class="sectionC clear_both">
+    <br><hr>
     <table style="float: left">
       <tbody>
         <tr>
@@ -266,14 +302,14 @@
         <table>
           <tbody>
             <tr>
-              <th style="width: 40%">Market</th>
+              <th>Market</th>
               <td>[BaseMarket1]</td>
               <td>[BaseMarket2]</td>
               <td>[BaseMarket3]</td>
             </tr>
 
             <tr>
-              <th style="width: 40%">Pay</th>
+              <th>Pay</th>
               <td class="bottom-border">[BasePay1]</td>
               <td class="bottom-border">[BasePay2]</td>
               <td class="bottom-border">[BasePay3]</td>
@@ -293,14 +329,14 @@
         <table>
           <tbody>
             <tr>
-              <th style="width: 40%">Market</th>
+              <th>Market</th>
               <td>[TotalMarket1]</td>
               <td>[TotalMarket2]</td>
               <td>[TotalMarket3]</td>
             </tr>
 
             <tr>
-              <th style="width: 40%">Pay</th>
+              <th>Pay</th>
               <td class="bottom-border">[TotalPay1]</td>
               <td class="bottom-border">[TotalPay2]</td>
               <td class="bottom-border">[TotalPay3]</td>
@@ -329,7 +365,8 @@
 
 <!-- should probably put this in a separate subreport file also-->
   <div class="sectionD clear_both">
-    <h4 style="margin-right: auto">Incumbents</h4>
+    <h4 style="margin-right: auto">&nbsp;Incumbents</h4>
+    <hr>
     <div style="width: 25%; float: left">
       [EmployeeCode] [EmployeeName]
     </div>
