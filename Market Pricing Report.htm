@@ -1,4 +1,59 @@
 <style type="text/css">
+  html {
+    font-size: .75em;
+  }
+
+  .float_left {
+    float: left;
+    width: 68%;
+    text-align; left;
+  }
+
+  .float_left th {
+    margin: 0 1%;
+  }
+
+  .align_left {
+    text-align: left;
+  }
+
+  .float_right {
+    float: right;
+    width: 32%;
+    text-align: right;
+  }
+
+  .float_right table {
+    width: 100%;
+  }
+
+  .float_right th {
+    width: 25%;
+  }
+
+  .float_right td {
+    text-align: right;
+    width: 25%;
+  }
+
+  .float_right_40 {
+    float: right;
+    width: 40%;
+    text-align: right;
+  }
+
+  .float_right_40 table {
+    width: 100%;
+  }
+
+  .float_right_40 th {
+    width: 20%;
+  }
+
+  .float_right_40 td {
+    text-align: right;
+  }
+
   th {
     font-weight: bold; 
   }
@@ -8,8 +63,9 @@
     padding-right: 10px;
   }
   
-  .struct_attrs {
+  .bottom-border {
     border-bottom: 1px solid;
+    width: 20%;
   }
   
   td {
@@ -20,128 +76,125 @@
     margin-bottom: 10px;
   }
 
-  .span-3-rows {
-    vertical-align: top;
+  .clear_both {
+    clear: both;
   }
 
   .container {
     page-break-after: always;
+    width: 100%;
   }
 
+  .header {
+    width: 100%;
+  }
+
+  .header h2 {
+    margin: 0;
+    font-size: 16pt;
+  }
   .sectionA {
     height: 25%;
-    clear: both;
+    margin-bottom: 10px;
   }
   
   .sectionB {
-    clear: both;  
   }
   
   .sectionB td {
     vertical-align: top;
   }
 
-  .sectionB table {
-    width: 100%;
-  }
-
   .sectionC {
     height: 30%;
-    clear: both;
   }
 
+  .sectionD {
+  }
+
+  .sectionD h4 {
+    margin: 5px;
+  }
+
+  .report_header {
+    text-align: center;
+    margin-top: 0;
+  }
+
+  hr {
+    margin: 0;
+  }
 </style>
 
 <div class="container">
-  <div class="sectionA">
+
+  <div class="sectionA clear_both">
+    <hr>
     <table style="float: left">
       <tbody>
         <tr>
           <th class="job_attrs">Job Title</th>
-          <td>Title Here</td>
+          <td>[JobTitle]</td>
         </tr>
 
         <tr>
           <th class="job_attrs">Job Code</th>
-          <td>[OrderID]</td>
+          <td>[JobID]</td>
         </tr>
 
         <tr>
           <th class="job_attrs">Quantifier</th>
-          <td>Quantifier Here</td>
+          <td>[Quantifier]</td>
         </tr>
 
         <tr>
           <th class="job_attrs">Region</th>
-          <td>[ShipCountry]</td>
+          <td>[Region]</td>
         </tr>
 
         <tr>
           <th class="job_attrs">EEs</th>
-          <td>EEs Here</td>
+          <td>[Ees]</td>
         </tr>
 
         <tr>
           <th class="job_attrs">Job Family</th>
-          <td>JobFamily Here</td>
+          <td>[JobFamily]</td>
         </tr>
       </tbody>
     </table>
 
-    <div style="float: right; width: 50%">
+    <div class="float_right_40">
       <div style="height: 40%">
-        <table style="width: 80%; margin-left: auto;">
+        <table>
           <tbody>
             <tr>
-              <th class="struct_attrs">Structure</th>
-              <th class="struct_attrs">Grade</th>
-              <th class="struct_attrs">Min</th>
-              <th class="struct_attrs">Mid</th>
-              <th class="struct_attrs">Max</th>
+              <th class="bottom-border">Structure</th>
+              <th class="bottom-border">Grade</th>
+              <th class="bottom-border">Min</th>
+              <th class="bottom-border">Mid</th>
+              <th class="bottom-border">Max</th>
             </tr>
 
             <tr>
-              <td>Struct</td>
-              <td>Grade</td>
-              <td>Min</td>
-              <td>Mid</td>
-              <td>Max</td>
+              <td>[Structure]</td>
+              <td>[Grade]</td>
+              <td>[Min]</td>
+              <td>[Mid]</td>
+              <td>[Max]</td>
             </tr>
           </tbody>
         </table>
       </div>
-
-      <div style="height: 50%">
-        <table style="width: 70%; margin-left: auto;">
-          <tbody>
-            <tr>
-              <th class="struct_attrs">Pay</th>
-              <th class="struct_attrs">Low</th>
-              <th class="struct_attrs">Avg</th>
-              <th class="struct_attrs">High</th>
-            </tr>
-
-            <tr>
-              <th>Payset Base</th>
-              <td>Lowbase</td>
-              <td>avgbase</td>
-              <td>highbase</td>
-            </tr>
-
-            <tr>
-              <th>PaySet Total</th>
-              <td>lowtotal</td>
-              <td>avgtotal</td>
-              <td>hightotal</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <div style="width: 80%; margin-left: auto">
+      [[Subreports/SubReport A]]
+	</div>
     </div>
   </div>
 
-  <div class="sectionB">
-    <table>
+  <div class="sectionB clear_both">
+    <br><hr>
+    <table class="float_left">
       <tbody>
         <tr>
           <th>Survey</th>
@@ -152,93 +205,93 @@
           <th>Page</th>
           <th>Cos</th>
           <th>Inc</th>
+        </tr>
+
+	<!--repeater-->
+
+        <tr>
+          <td>[Survey]</td>
+          <td>[Scope]</td>
+          <td>[JobTitle]</td>
+          <td>[Wgt]</td>
+          <td>[Adj]</td>
+          <td>[Page]</td>
+          <td>[Cos]</td>
+          <td>[Inc]</td>
+        </tr>
+
+        <tr>
+          <td colspan="8">[longString]</td>
+        </tr>
+
+	<!--/repeater-->
+
+      </tbody>
+    </table>
+
+    <table class="float_right">
+      <tbody>
+        <tr>
           <th>Survey Pay Type</th>
           <th>50thptile</th>
           <th>75thptile</th>
           <th>90thptile</th>
         </tr>
 
-        <!-- [repeater] -->
-
         <tr>
-          <td rowspan="3">TEST [ProductID]</td>
-          <td rowspan="3">Scope Here</td>
-          <td rowspan="3">Job title here</td>
-          <td rowspan="3">Wgt here</td>
-          <td rowspan="3">Adj here</td>
-          <td rowspan="3">Page here</td>
-          <td rowspan="3">Cos here</td>
-          <td rowspan="3">Inc here</td>
-          <td>Pay 1</td>
-          <td>50th 1</td>
-          <td>75th 1</td>
-          <td>90th 1</td>
+          <!-- a repeater will go here eventually, contained within the section B repeater -->
+          <td>[PayType]</td>
+          <td>[percentile1]</td>
+          <td>[percentile2]</td>
+          <td>[percentile3]</td>
+          <!-- subreport B has a dynamic number of rows based on paytype plus a fixed summary row -->
         </tr>
-
-        <tr>
-          <td>Pay 2</td>
-          <td>50th 2</td>
-          <td>75th 2</td>
-          <td>90th 2</td>
-        </tr>
-
-        <tr>
-          <td>Pay 3</td>
-          <td>50th 3</td>
-          <td>75th 3</td>
-          <td>90th 3</td>
-        </tr>
-
-        <tr>
-          <td colspan="8">[longString]</td>
-        </tr>
-	<!-- [/repeater] -->
       </tbody>
     </table>
   </div>
 
-  <div class="sectionC">
+  <div class="sectionC clear_both">
+    <br><hr>
     <table style="float: left">
       <tbody>
         <tr>
           <th class="job_attrs">Job Title</th>
-          <td>Title Here</td>
+          <td>[JobTitle]</td>
         </tr>
 
         <tr>
           <th class="job_attrs">Job Code</th>
-          <td>[OrderID]</td>
+          <td>[JobID]</td>
         </tr>
 
         <tr>
           <th class="job_attrs">Quantifier</th>
-          <td>Quantifier Here</td>
+          <td>[Quantifier]</td>
         </tr>
 
         <tr>
           <th class="job_attrs">Region</th>
-          <td>[ShipCountry]</td>
+          <td>[Region]</td>
         </tr>
       </tbody>
     </table>
 
-    <div style="float: right; width: 50%">
+    <div class="float_right">
       <div style="height: 40%">
-        <h3 style="float: left">Payset Base</h3>
-        <table style="margin-left: auto; width: 70%">
+        <table>
           <tbody>
             <tr>
-              <th style="text-align: left">Market</th>
-              <td>BaseM1</td>
-              <td>BaseM2</td>
-              <td>BaseM3</td>
+              <th>Market</th>
+              <td>[BaseMarket1]</td>
+              <td>[BaseMarket2]</td>
+              <td>[BaseMarket3]</td>
             </tr>
 
             <tr>
-              <th style="text-align: left">Pay</th>
-              <td class="struct_attrs">BaseP1</td>
-              <td class="struct_attrs">BaseP2</td>
-              <td class="struct_attrs">BaseP3</td>
+              <th>Pay</th>
+              <td class="bottom-border">[BasePay1]</td>
+              <td class="bottom-border">[BasePay2]</td>
+              <td class="bottom-border">[BasePay3]</td>
             </tr>
 
             <tr>
@@ -251,22 +304,21 @@
         </table>
       </div>
 
-      <div style="height: 40%; line-height: 1">
-        <h3 style="float: left; vertical-align: top">Payset Total</h3>
-        <table style="margin-left: auto; width: 70%">
+      <div style="height: 40%">
+        <table>
           <tbody>
             <tr>
-              <th style="text-align: left">Market</th>
-              <td>TMark1</td>
-              <td>TMark2</td>
-              <td>TMark3</td>
+              <th>Market</th>
+              <td>[TotalMarket1]</td>
+              <td>[TotalMarket2]</td>
+              <td>[TotalMarket3]</td>
             </tr>
 
             <tr>
-              <th style="text-align: left">Pay</th>
-              <td class="struct_attrs">TPay1</td>
-              <td class="struct_attrs">TPay2</td>
-              <td class="struct_attrs">TPay3</td>
+              <th>Pay</th>
+              <td class="bottom-border">[TotalPay1]</td>
+              <td class="bottom-border">[TotalPay2]</td>
+              <td class="bottom-border">[TotalPay3]</td>
             </tr>
 
             <tr>
@@ -279,11 +331,25 @@
         </table>
       </div>
     </div>
-  </div>
 
-  <div class="sectionD">
-    <h4 style="margin-right: auto">Incumbents</h4>
-    <div>[[MPRsubreport]]
+    <div class="float_right">
+      <div style="height: 40%">
+        <h3>Payset Base</h3>
+      </div>
+      <div style="height: 40%">
+        <h3>Payset Total</h3>
+      </div>
     </div>
   </div>
+
+<!-- should probably put this in a separate subreport file also-->
+  <div class="sectionD clear_both">
+    <h4 style="margin-right: auto">&nbsp;Incumbents</h4>
+    <hr>
+    <div style="width: 25%; float: left">
+      [EmployeeCode] [EmployeeName]
+    </div>
+  </div>
+
+  <br>
 </div>
