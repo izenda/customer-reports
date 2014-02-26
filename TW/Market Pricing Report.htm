@@ -1,11 +1,11 @@
 <div class="report-container">
-	<hr style="margin-top: 0px;"/>
+	<hr style="margin-top: 0px;">
 	<div class="sectionA">
 		<table style="width:100%;">
-			<tr>
+			<tbody><tr>
 				<td>
 					<table style="float: left">
-						<tr>
+						<tbody><tr>
 						  <th class="job_attrs">Job Title</th>
 						  <td style="font-weight:bold;">[JobTitle]</td>
 						</tr>
@@ -29,39 +29,39 @@
 						  <th class="job_attrs">Job Family</th>
 						  <td>[JobFamily]</td>
 						</tr>
-					</table>
+					</tbody></table>
 				</td>
 				<td>
 					<table style="width:100%;">
-						<tr><td>
-							<table style="margin-left: auto;">
-								<tr class="border-bottom">
-								  <th style="padding-left:30px;text-align:right;">Structure</th>
-								  <th style="padding-left:30px;text-align:right;">Grade</th>
-								  <th style="padding-left:30px;text-align:right;">Min</th>
-								  <th style="padding-left:30px;text-align:right;">Mid</th>
-								  <th  style="padding-left:30px;text-align:right;">Max</th>
+						<tbody><tr><td>
+							<table style="margin-left: auto; text-align: left">
+								<tbody><tr class="border-bottom">
+								  <th style="padding-right: 10px"> Structure</th> 								  
+								  <th style="width: 130px">Grade</th>
+								  <th style="width: 80px">Min</th>
+								  <th style="width: 80px">Mid</th>
+								  <th style="width: 80px">Max</th>
 								</tr>
 
 								<tr>
-								  <td>[StructureName]</td>
-								  <td>[StructureGrade]</td>
-								  <td>[StructureMin]</td>
-								  <td>[StructureMid]</td>
-								  <td>[StructureMax]</td>
+								  <td style="text-align: left">[StructureName]</td>
+								  <td style="text-align: left">[StructureGrade]</td>
+								  <td style="text-align: left">[StructureMin]</td>
+								  <td style="text-align: left">[StructureMid]</td>
+								  <td style="text-align: left">[StructureMax]</td>
 								</tr>
-							</table>
+							</tbody></table>
 						</td></tr>
 						<tr><td>[SubreportA]</td></tr>
-					</table>
+					</tbody></table>
 				</td>
 			</tr>
-		</table>
+		</tbody></table>
 	</div>
-	<hr/>
+	<hr>
 	<div class="sectionB">
 		<table class="surveys">
-			<tr>
+			<tbody><tr>
 			  <th>Survey</th>
 			  <th>Scope</th>
 			  <th>Job Title/Code</th>
@@ -92,15 +92,15 @@
 			  <td colspan="8">[Description]</td>
 			</tr>
 		<!--[/repeater]-->
-		</table>
+		</tbody></table>
 	</div>
-	<hr/>
+	<hr>
 	<div class="sectionC">
 		<table style="width:100%;">
-			<tr>
+			<tbody><tr>
 				<td>
 					<table style="float: left">
-						<tr>
+						<tbody><tr>
 						  <th class="job_attrs">Job Title</th>
 						  <td style="font-weight:bold;">[JobTitle]</td>
 						</tr>
@@ -116,17 +116,17 @@
 						  <th class="job_attrs">Region</th>
 						  <td>[Region]</td>
 						</tr>
-					</table>
+					</tbody></table>
 				</td>
 				<td colspan="4">
 					[SubreportC]
 				</td>
 			</tr>
-		</table>
+		</tbody></table>
 	</div>
 	<div class="sectionD">
 		<div style="font-weight:bold;">Incumbents</div>
-		<hr/>
+		<hr>
 		[SubreportD]
 	</div>
 </div>
