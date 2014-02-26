@@ -1,0 +1,132 @@
+<div class="report-container">
+	<hr style="margin-top: 0px;"/>
+	<div class="sectionA">
+		<table style="width:100%;">
+			<tr>
+				<td>
+					<table style="float: left">
+						<tr>
+						  <th class="job_attrs">Job Title</th>
+						  <td style="font-weight:bold;">[JobTitle]</td>
+						</tr>
+						<tr>
+						  <th class="job_attrs">Job Code</th>
+						  <td>[JobCode]</td>
+						</tr>
+						<tr>
+						  <th class="job_attrs">Quantifier</th>
+						  <td>[Qualifier]</td>
+						</tr>
+						<tr>
+						  <th class="job_attrs">Region</th>
+						  <td>[Region]</td>
+						</tr>
+						<tr>
+						  <th class="job_attrs">EEs</th>
+						  <td>[EEs]</td>
+						</tr>
+						<tr>
+						  <th class="job_attrs">Job Family</th>
+						  <td>[JobFamily]</td>
+						</tr>
+					</table>
+				</td>
+				<td>
+					<table style="width:100%;">
+						<tr><td>
+							<table style="margin-left: auto;">
+								<tr class="border-bottom">
+								  <th style="padding-left:30px;text-align:right;">Structure</th>
+								  <th style="padding-left:30px;text-align:right;">Grade</th>
+								  <th style="padding-left:30px;text-align:right;">Min</th>
+								  <th style="padding-left:30px;text-align:right;">Mid</th>
+								  <th  style="padding-left:30px;text-align:right;">Max</th>
+								</tr>
+
+								<tr>
+								  <td>[StructureName]</td>
+								  <td>[StructureGrade]</td>
+								  <td>[StructureMin]</td>
+								  <td>[StructureMid]</td>
+								  <td>[StructureMax]</td>
+								</tr>
+							</table>
+						</td></tr>
+						<tr><td>[SubreportA]</td></tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<hr/>
+	<div class="sectionB">
+		<table class="surveys">
+			<tr>
+			  <th>Survey</th>
+			  <th>Scope</th>
+			  <th>Job Title/Code</th>
+			  <th>Wgt</th>
+			  <th>Adj</th>
+			  <th>Page</th>
+			  <th>Cos</th>
+			  <th>Inc</th>
+			  <th style="width: 130px;">Survey Pay Type</th>
+			  <th style="width: 80px;">50thptile</th>
+			  <th style="width: 80px;">75thptile</th>
+			  <th style="width: 80px;">90thptile</th>
+			</tr>
+
+		<!--[repeater]-->
+			<tr style="border-top: 1px dashed black;">
+			  <td>[SurveyName]</td>
+			  <td>[Scope]</td>
+			  <td>[JobTitle]</td>
+			  <td>[Wgt]</td>
+			  <td>[Adj]</td>
+			  <td>[Page]</td>
+			  <td>[Cos]</td>
+			  <td>[Inc]</td>
+			  <td colspan="4">[SubreportB]</td>
+			</tr>
+			<tr>
+			  <td colspan="8">[Description]</td>
+			</tr>
+		<!--[/repeater]-->
+		</table>
+	</div>
+	<hr/>
+	<div class="sectionC">
+		<table style="width:100%;">
+			<tr>
+				<td>
+					<table style="float: left">
+						<tr>
+						  <th class="job_attrs">Job Title</th>
+						  <td style="font-weight:bold;">[JobTitle]</td>
+						</tr>
+						<tr>
+						  <th class="job_attrs">Job Code</th>
+						  <td>[JobCode]</td>
+						</tr>
+						<tr>
+						  <th class="job_attrs">Quantifier</th>
+						  <td>[Qualifier]</td>
+						</tr>
+						<tr>
+						  <th class="job_attrs">Region</th>
+						  <td>[Region]</td>
+						</tr>
+					</table>
+				</td>
+				<td colspan="4">
+					[SubreportC]
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="sectionD">
+		<div style="font-weight:bold;">Incumbents</div>
+		<hr/>
+		[SubreportD]
+	</div>
+</div>
