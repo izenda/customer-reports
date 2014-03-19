@@ -1,0 +1,32 @@
+<ReportSet OwnerTenantID="" Version="6" ID="47d104a5-c2d4-4a1b-9e5c-8025dc6f5c76" DateModified="12/17/2013 8:36:40 AM" Title="" ShowReportParameters="False" Description="" Header="" PageHeader="" CustomCss="" ReportSetType="ReportDesigner" ReadOnly="False" ViewOnly="False" InsertZeroValues="False" LandscapePrinting="False" FieldValueColumnPairs="2" ItemsPerPage="10000" AddBookmarkForVisualGroup="False" PageBreakAfterVisualGroups="False" Footer="" HeaderJustification="L" FooterJustification="L" TitleJustification="L" DescriptionJustification="L" HeaderImageJustification="L" CsvOnly="False" ShowVisualGroupLabels="False" Database="" UsePaginationInWebView="True" Distinct="True" ShowPageNumber="True" ShowDateTime="False" MinimizeGridWidth="True" VisualGroupStyle="CommaDelimited" CheckBoxDataSources="True" Schedule="2011-01-01 00:00:00" ScheduleTimeZome="0" Recipients="" RepeatType="None" SendEmailAs="Link" UserName="DefaultAdministrator" Visibility="OnlyMe" Designer="AdHocReportDesigner" DrillDownKey="" ColumnsCount="2" FilterValue="AtLeastOne" MinDate="12/6/2013 12:49:00 PM" MaxDate="12/4/2013 12:49:00 PM">
+	<ReportVisibility>
+		<Property SharedWith="Everyone" Rights="None" />
+	</ReportVisibility>
+	<JoinedTables UseAutoConditions="True" AllowNulls="False">
+		<JoinedTable Name="[dbo].[Orders]" Alias="" RightAlias="" JoinType="INNER" LeftConditionColumn="" RightConditionTable="" RightConditionColumn="" />
+	</JoinedTables>
+	<Criterias FilterLogicValue="">
+		<Criteria Column="[dbo].[Orders].[ShipCountry]" Not="False" FieldFilter="False" Operator="Equals_Multiple" OrIsBlank="False" Description="" AliasTable="" Parameter="True" Value="Argentina,Brazil,Mexico,Venezuela" />
+	</Criterias>
+	<Report Title="Orders by Date &amp; Country" Code="" Name="Chart">
+		<Options Top="-2147483648" Distinct="True" StoreResults="False" SelectVisibleColumns="True" ChartTypeName="Trend" AddGrandTotals="False" AddPivotTotals="False" TotalsFunction="None" Invert="False" FieldValue="False" AddDeltas="False" LinesPerItem="1" ColumnsLimit="-1" ReportType="Chart" DashboardScroll="True" VisualGroupStyle="CommaDelimited" />
+		<Position X="0" Y="0" ColSpan="1" RowSpan="1" DbDsgn2Height="0" />
+		<Selections>
+			<Selection ColumnName="[dbo].[Orders].[OrderDate]" ColumnSql="" Description="Label" Definition="" FormatString="GROUP_BY_QUARTER" GroupBy="False" OrderType="ASC" WidthSettedManually="False" Width="" Visible="True" Gradient="False" InsertZeroValues="False" AggregateFunction="GROUP_BY_QUARTER" Justification="NotSet" LabelJustification="Center" Master="False" GaugeValuesInCurrencyFormat="False" Operator="None" AliasTable="" ShouldBeFormatted="True" TargetReport="" GaugeTargetReport="" GaugeTargetEffect="" Url="example:Page.aspx?id={0}&amp;value={1}" SubtotalTitle="" ValueString="" SubtotalFunction="DEFAULT" SubtotalExpression="" IsItalic="False" IsBold="False" Coefficient="" ColumnGroup="" />
+			<Selection ColumnName="[dbo].[Orders].[OrderID]" ColumnSql="" Description="Value" Definition="" FormatString="{0:#,0}" GroupBy="False" OrderType="NONE" WidthSettedManually="False" Width="" Visible="True" Gradient="False" InsertZeroValues="False" AggregateFunction="COUNT_DISTINCT" Justification="NotSet" LabelJustification="Center" Master="False" GaugeValuesInCurrencyFormat="False" Operator="None" AliasTable="" ShouldBeFormatted="False" TargetReport="" GaugeTargetReport="" GaugeTargetEffect="" Url="example:Page.aspx?id={0}&amp;value={1}" SubtotalTitle="" ValueString="" SubtotalFunction="DEFAULT" SubtotalExpression="" IsItalic="False" IsBold="False" Coefficient="" ColumnGroup="" />
+			<Selection ColumnName="[dbo].[Orders].[ShipCountry]" ColumnSql="" Description="Separator" Definition="" FormatString="{0}" GroupBy="False" OrderType="NONE" WidthSettedManually="False" Width="" Visible="True" Gradient="False" InsertZeroValues="False" AggregateFunction="GROUP" Justification="NotSet" LabelJustification="Center" Master="False" GaugeValuesInCurrencyFormat="False" Operator="None" AliasTable="" ShouldBeFormatted="True" TargetReport="" GaugeTargetReport="" GaugeTargetEffect="" Url="example:Page.aspx?id={0}&amp;value={1}" SubtotalTitle="" ValueString="" SubtotalFunction="DEFAULT" SubtotalExpression="" IsItalic="False" IsBold="False" Coefficient="" ColumnGroup="" />
+		</Selections>
+		<ChartProperties>
+			<Property Name="CombineBottom" Value="0" />
+			<Property Name="CountInRow" Value="True" />
+			<Property Name="LabelTitle" Value="" />
+			<Property Name="Scale" Value="" />
+			<Property Name="ShowLegend" Value="True" />
+			<Property Name="ShowValueLabels" Value="False" />
+			<Property Name="Smooth" Value="True" />
+			<Property Name="ThirdMode" Value="True" />
+			<Property Name="UseSimpleStyle" Value="True" />
+			<Property Name="ValueTitle" Value="" />
+		</ChartProperties>
+	</Report>
+</ReportSet>

@@ -1,0 +1,170 @@
+<ReportSet OwnerTenantID="" Version="6" ID="4d8766f9-f88e-460e-8912-4f0878601f13" DateModified="12/23/2013 4:25:08 PM" Title="" ShowReportParameters="False" Description="" Header="" PageHeader="" CustomCss="" ReportSetType="DashboardDesigner2" ReadOnly="False" ViewOnly="False" InsertZeroValues="False" LandscapePrinting="False" FieldValueColumnPairs="2" ItemsPerPage="10000" AddBookmarkForVisualGroup="False" PageBreakAfterVisualGroups="False" Footer="" HeaderJustification="" FooterJustification="" TitleJustification="" DescriptionJustification="" HeaderImageJustification="" CsvOnly="False" ShowVisualGroupLabels="False" Database="" UsePaginationInWebView="True" Distinct="False" ShowPageNumber="True" ShowDateTime="False" MinimizeGridWidth="False" VisualGroupStyle="CommaDelimited" CheckBoxDataSources="False" Schedule="0001-01-01 00:00:00" ScheduleTimeZome="-1" Recipients="" RepeatType="None" SendEmailAs="" UserName="DefaultAdministrator" Visibility="Everyone" Designer="DashboardDesigner2" DrillDownKey="" ColumnsCount="2" FilterValue="None" MinDate="12/24/2013 4:25:08 PM" MaxDate="12/22/2013 4:25:08 PM">
+	<ReportVisibility>
+		<Property SharedWith="Everyone" Rights="None" />
+	</ReportVisibility>
+	<Report Title="ArcMap Validate" Code="" Name="Chart@Customizations\ArcMap Validate">
+		<Options Top="-999" Distinct="True" StoreResults="False" SelectVisibleColumns="True" ChartTypeName="Visualization" AddGrandTotals="False" AddPivotTotals="False" TotalsFunction="None" Invert="False" FieldValue="False" AddDeltas="False" LinesPerItem="1" ColumnsLimit="-1" ReportType="Chart" DashboardScroll="False" VisualGroupStyle="CommaDelimited" />
+		<Position X="0" Y="0" ColSpan="3" RowSpan="1" DbDsgn2Height="0" />
+		<JoinedTables UseAutoConditions="True" AllowNulls="False">
+			<JoinedTable Name="[dbo].[Employees]" Alias="" RightAlias="" JoinType="INNER" LeftConditionColumn="" RightConditionTable="" RightConditionColumn="" />
+			<JoinedTable Name="[dbo].[Orders]" Alias="" RightAlias="" JoinType="INNER" LeftConditionColumn="[dbo].[Orders].[EmployeeID]" RightConditionTable="[dbo].[Employees]" RightConditionColumn="[dbo].[Employees].[EmployeeID]" />
+			<JoinedTable Name="[dbo].[Order Details]" Alias="" RightAlias="" JoinType="INNER" LeftConditionColumn="[dbo].[Order Details].[OrderID]" RightConditionTable="[dbo].[Orders]" RightConditionColumn="[dbo].[Orders].[OrderID]" />
+		</JoinedTables>
+		<Criterias FilterLogicValue="">
+			<Criteria Column="[dbo].[Employees].[Country]" Not="False" FieldFilter="False" Operator="Equals_Select" OrIsBlank="False" Description="" AliasTable="" Parameter="True" Value="USA" />
+			<Criteria Column="[dbo].[Orders].[ShipCountry]" Not="False" FieldFilter="False" Operator="Equals_Select" OrIsBlank="False" Description="" AliasTable="" Parameter="True" Value="USA" />
+		</Criterias>
+		<Selections />
+		<ChartProperties>
+			<Property Name="VisualizationType" Value="Map#Arc Map" />
+			<Property Name="VisSourceOfData" Value="Customizations#ArcMap Validate" />
+			<Property Name="CombineBottom" Value="0" />
+			<Property Name="CountInRow" Value="True" />
+			<Property Name="ThirdMode" Value="True" />
+		</ChartProperties>
+	</Report>
+	<Report Title="Bar Validate" Code="" Name="Chart@Customizations\Bar Validate">
+		<Options Top="-999" Distinct="True" StoreResults="False" SelectVisibleColumns="True" ChartTypeName="Bar" AddGrandTotals="False" AddPivotTotals="False" TotalsFunction="None" Invert="False" FieldValue="False" AddDeltas="False" LinesPerItem="1" ColumnsLimit="-1" ReportType="Chart" DashboardScroll="False" VisualGroupStyle="CommaDelimited" />
+		<Position X="0" Y="3" ColSpan="1" RowSpan="1" DbDsgn2Height="0" />
+		<JoinedTables UseAutoConditions="True" AllowNulls="False">
+			<JoinedTable Name="[dbo].[Orders]" Alias="" RightAlias="" JoinType="INNER" LeftConditionColumn="" RightConditionTable="" RightConditionColumn="" />
+		</JoinedTables>
+		<Selections>
+			<Selection ColumnName="[dbo].[Orders].[ShipCountry]" ColumnSql="" Description="Label" Definition="" FormatString="{0}" GroupBy="False" OrderType="NONE" WidthSettedManually="False" Width="" Visible="True" Gradient="False" InsertZeroValues="False" AggregateFunction="GROUP" Justification="NotSet" LabelJustification="Center" Master="False" GaugeValuesInCurrencyFormat="False" Operator="None" AliasTable="" ShouldBeFormatted="True" TargetReport="" GaugeTargetReport="" GaugeTargetEffect="" Url="example:Page.aspx?id={0}&amp;value={1}" SubtotalTitle="" ValueString="" SubtotalFunction="DEFAULT" SubtotalExpression="" IsItalic="False" IsBold="False" Coefficient="" ColumnGroup="" />
+			<Selection ColumnName="[dbo].[Orders].[ShipName]" ColumnSql="" Description="Value" Definition="" FormatString="{0:#,0}" GroupBy="False" OrderType="DESC" WidthSettedManually="False" Width="" Visible="True" Gradient="False" InsertZeroValues="False" AggregateFunction="COUNT_DISTINCT" Justification="NotSet" LabelJustification="Center" Master="False" GaugeValuesInCurrencyFormat="False" Operator="None" AliasTable="" ShouldBeFormatted="False" TargetReport="" GaugeTargetReport="" GaugeTargetEffect="" Url="example:Page.aspx?id={0}&amp;value={1}" SubtotalTitle="" ValueString="" SubtotalFunction="DEFAULT" SubtotalExpression="" IsItalic="False" IsBold="False" Coefficient="" ColumnGroup="" />
+		</Selections>
+		<ChartProperties>
+			<Property Name="CombineBottom" Value="0" />
+			<Property Name="CountInRow" Value="2" />
+			<Property Name="HiddenEffectField" Value="" />
+			<Property Name="Horizontal" Value="False" />
+			<Property Name="LabelTitle" Value="" />
+			<Property Name="Pareto" Value="False" />
+			<Property Name="RightValueTitle" Value="" />
+			<Property Name="Scale" Value="" />
+			<Property Name="ShadeAreaUnderLine" Value="False" />
+			<Property Name="ShowLegend" Value="False" />
+			<Property Name="Stacked" Value="False" />
+			<Property Name="TargetReport" Value="" />
+			<Property Name="ThirdMode" Value="true" />
+			<Property Name="ValueTitle" Value="Customer Count" />
+		</ChartProperties>
+	</Report>
+	<Report Title="ComboBar Validate" Code="" Name="Chart@Customizations\ComboBar Validate">
+		<Options Top="-999" Distinct="True" StoreResults="False" SelectVisibleColumns="True" ChartTypeName="Bar" AddGrandTotals="False" AddPivotTotals="False" TotalsFunction="None" Invert="False" FieldValue="False" AddDeltas="False" LinesPerItem="1" ColumnsLimit="-1" ReportType="Chart" DashboardScroll="False" VisualGroupStyle="CommaDelimited" />
+		<Position X="1" Y="3" ColSpan="1" RowSpan="1" DbDsgn2Height="0" />
+		<JoinedTables UseAutoConditions="True" AllowNulls="False">
+			<JoinedTable Name="[dbo].[Orders]" Alias="" RightAlias="" JoinType="INNER" LeftConditionColumn="" RightConditionTable="" RightConditionColumn="" />
+		</JoinedTables>
+		<Selections>
+			<Selection ColumnName="[dbo].[Orders].[ShipCountry]" ColumnSql="" Description="Label" Definition="" FormatString="{0}" GroupBy="False" OrderType="NONE" WidthSettedManually="False" Width="" Visible="True" Gradient="False" InsertZeroValues="False" AggregateFunction="GROUP" Justification="NotSet" LabelJustification="Center" Master="False" GaugeValuesInCurrencyFormat="False" Operator="None" AliasTable="" ShouldBeFormatted="True" TargetReport="" GaugeTargetReport="" GaugeTargetEffect="" Url="example:Page.aspx?id={0}&amp;value={1}" SubtotalTitle="" ValueString="" SubtotalFunction="DEFAULT" SubtotalExpression="" IsItalic="False" IsBold="False" Coefficient="" ColumnGroup="" />
+			<Selection ColumnName="[dbo].[Orders].[OrderID]" ColumnSql="" Description="Value" Definition="" FormatString="{0:#,0}" GroupBy="False" OrderType="NONE" WidthSettedManually="False" Width="" Visible="True" Gradient="False" InsertZeroValues="False" AggregateFunction="COUNT_DISTINCT" Justification="NotSet" LabelJustification="Center" Master="False" GaugeValuesInCurrencyFormat="False" Operator="None" AliasTable="" ShouldBeFormatted="False" TargetReport="" GaugeTargetReport="" GaugeTargetEffect="" Url="example:Page.aspx?id={0}&amp;value={1}" SubtotalTitle="" ValueString="" SubtotalFunction="DEFAULT" SubtotalExpression="" IsItalic="False" IsBold="False" Coefficient="" ColumnGroup="" />
+			<Selection ColumnName="[dbo].[Orders].[Freight]" ColumnSql="" Description="LineValue" Definition="" FormatString="{0:C2}" GroupBy="False" OrderType="NONE" WidthSettedManually="False" Width="" Visible="True" Gradient="False" InsertZeroValues="False" AggregateFunction="SUM" Justification="NotSet" LabelJustification="Center" Master="False" GaugeValuesInCurrencyFormat="False" Operator="None" AliasTable="" ShouldBeFormatted="False" TargetReport="" GaugeTargetReport="" GaugeTargetEffect="" Url="example:Page.aspx?id={0}&amp;value={1}" SubtotalTitle="" ValueString="" SubtotalFunction="DEFAULT" SubtotalExpression="" IsItalic="False" IsBold="False" Coefficient="" ColumnGroup="" />
+		</Selections>
+		<ChartProperties>
+			<Property Name="CombineBottom" Value="0" />
+			<Property Name="CountInRow" Value="2" />
+			<Property Name="HiddenEffectField" Value="" />
+			<Property Name="Horizontal" Value="False" />
+			<Property Name="LabelTitle" Value="" />
+			<Property Name="Pareto" Value="False" />
+			<Property Name="RightValueTitle" Value="Freight Value" />
+			<Property Name="Scale" Value="" />
+			<Property Name="ShadeAreaUnderLine" Value="False" />
+			<Property Name="ShowLegend" Value="True" />
+			<Property Name="Stacked" Value="False" />
+			<Property Name="TargetReport" Value="" />
+			<Property Name="ThirdMode" Value="true" />
+			<Property Name="ValueTitle" Value="Order Volume" />
+		</ChartProperties>
+	</Report>
+	<Report Title="Funnel Validate" Code="" Name="Chart@Customizations\Funnel Validate">
+		<Options Top="-999" Distinct="True" StoreResults="False" SelectVisibleColumns="True" ChartTypeName="Funnel" AddGrandTotals="False" AddPivotTotals="False" TotalsFunction="None" Invert="False" FieldValue="False" AddDeltas="False" LinesPerItem="1" ColumnsLimit="-1" ReportType="Chart" DashboardScroll="False" VisualGroupStyle="CommaDelimited" />
+		<Position X="0" Y="2" ColSpan="1" RowSpan="1" DbDsgn2Height="0" />
+		<JoinedTables UseAutoConditions="True" AllowNulls="False">
+			<JoinedTable Name="[dbo].[Orders]" Alias="" RightAlias="" JoinType="INNER" LeftConditionColumn="" RightConditionTable="" RightConditionColumn="" />
+		</JoinedTables>
+		<Selections>
+			<Selection ColumnName="[dbo].[Orders].[OrderDate]" ColumnSql="" Description="Label" Definition="" FormatString="GROUP_BY_QUARTER" GroupBy="False" OrderType="DESC" WidthSettedManually="False" Width="" Visible="True" Gradient="False" InsertZeroValues="False" AggregateFunction="GROUP_BY_QUARTER" Justification="NotSet" LabelJustification="Center" Master="False" GaugeValuesInCurrencyFormat="False" Operator="None" AliasTable="" ShouldBeFormatted="True" TargetReport="" GaugeTargetReport="" GaugeTargetEffect="" Url="example:Page.aspx?id={0}&amp;value={1}" SubtotalTitle="" ValueString="" SubtotalFunction="DEFAULT" SubtotalExpression="" IsItalic="False" IsBold="False" Coefficient="" ColumnGroup="" />
+			<Selection ColumnName="[dbo].[Orders].[OrderID]" ColumnSql="" Description="Value" Definition="" FormatString="{0:#,0}" GroupBy="False" OrderType="NONE" WidthSettedManually="False" Width="" Visible="True" Gradient="False" InsertZeroValues="False" AggregateFunction="COUNT_DISTINCT" Justification="NotSet" LabelJustification="Center" Master="False" GaugeValuesInCurrencyFormat="False" Operator="None" AliasTable="" ShouldBeFormatted="False" TargetReport="" GaugeTargetReport="" GaugeTargetEffect="" Url="example:Page.aspx?id={0}&amp;value={1}" SubtotalTitle="" ValueString="" SubtotalFunction="DEFAULT" SubtotalExpression="" IsItalic="False" IsBold="False" Coefficient="" ColumnGroup="" />
+		</Selections>
+		<ChartProperties>
+			<Property Name="CombineBottom" Value="0" />
+			<Property Name="CountInRow" Value="2" />
+			<Property Name="HiddenEffectField" Value="" />
+			<Property Name="Mode" Value="" />
+			<Property Name="Scale" Value="" />
+			<Property Name="ShowPercent" Value="True" />
+			<Property Name="TargetReport" Value="" />
+			<Property Name="ThirdMode" Value="true" />
+		</ChartProperties>
+	</Report>
+	<Report Title="Pie Validate" Code="" Name="Chart@Customizations\Pie Validate">
+		<Options Top="-999" Distinct="True" StoreResults="False" SelectVisibleColumns="True" ChartTypeName="Pie" AddGrandTotals="False" AddPivotTotals="False" TotalsFunction="None" Invert="False" FieldValue="False" AddDeltas="False" LinesPerItem="1" ColumnsLimit="-1" ReportType="Chart" DashboardScroll="False" VisualGroupStyle="CommaDelimited" />
+		<Position X="1" Y="1" ColSpan="1" RowSpan="1" DbDsgn2Height="0" />
+		<JoinedTables UseAutoConditions="True" AllowNulls="False">
+			<JoinedTable Name="[dbo].[Orders]" Alias="" RightAlias="" JoinType="INNER" LeftConditionColumn="" RightConditionTable="" RightConditionColumn="" />
+		</JoinedTables>
+		<Selections>
+			<Selection ColumnName="[dbo].[Orders].[ShipName]" ColumnSql="" Description="Label" Definition="" FormatString="{0}" GroupBy="False" OrderType="NONE" WidthSettedManually="False" Width="" Visible="True" Gradient="False" InsertZeroValues="False" AggregateFunction="GROUP" Justification="NotSet" LabelJustification="Center" Master="False" GaugeValuesInCurrencyFormat="False" Operator="None" AliasTable="" ShouldBeFormatted="True" TargetReport="" GaugeTargetReport="" GaugeTargetEffect="" Url="example:Page.aspx?id={0}&amp;value={1}" SubtotalTitle="" ValueString="" SubtotalFunction="DEFAULT" SubtotalExpression="" IsItalic="False" IsBold="False" Coefficient="" ColumnGroup="" />
+			<Selection ColumnName="[dbo].[Orders].[Freight]" ColumnSql="" Description="Value" Definition="" FormatString="{0:C2}" GroupBy="False" OrderType="DESC" WidthSettedManually="False" Width="" Visible="True" Gradient="False" InsertZeroValues="False" AggregateFunction="SUM" Justification="NotSet" LabelJustification="Center" Master="False" GaugeValuesInCurrencyFormat="False" Operator="None" AliasTable="" ShouldBeFormatted="False" TargetReport="" GaugeTargetReport="" GaugeTargetEffect="" Url="example:Page.aspx?id={0}&amp;value={1}" SubtotalTitle="" ValueString="" SubtotalFunction="DEFAULT" SubtotalExpression="" IsItalic="False" IsBold="False" Coefficient="" ColumnGroup="" />
+		</Selections>
+		<ChartProperties>
+			<Property Name="ChartType" Value="Pie" />
+			<Property Name="CombineBottom" Value="30" />
+			<Property Name="CountInRow" Value="2" />
+			<Property Name="ExplodeLargestSlice" Value="False" />
+			<Property Name="HiddenEffectField" Value="" />
+			<Property Name="Scale" Value="150%" />
+			<Property Name="ShowAs3D" Value="True" />
+			<Property Name="ShowLegend" Value="False" />
+			<Property Name="ShowPercentage" Value="True" />
+			<Property Name="ShowSliceLabels" Value="True" />
+			<Property Name="ShowValue" Value="False" />
+			<Property Name="TargetReport" Value="" />
+			<Property Name="ThirdMode" Value="true" />
+		</ChartProperties>
+	</Report>
+	<Report Title="Trend Validate" Code="" Name="Chart@Customizations\Trend Validate">
+		<Options Top="-999" Distinct="True" StoreResults="False" SelectVisibleColumns="True" ChartTypeName="Trend" AddGrandTotals="False" AddPivotTotals="False" TotalsFunction="None" Invert="False" FieldValue="False" AddDeltas="False" LinesPerItem="1" ColumnsLimit="-1" ReportType="Chart" DashboardScroll="False" VisualGroupStyle="CommaDelimited" />
+		<Position X="1" Y="2" ColSpan="1" RowSpan="1" DbDsgn2Height="0" />
+		<JoinedTables UseAutoConditions="True" AllowNulls="False">
+			<JoinedTable Name="[dbo].[Orders]" Alias="" RightAlias="" JoinType="INNER" LeftConditionColumn="" RightConditionTable="" RightConditionColumn="" />
+		</JoinedTables>
+		<Criterias FilterLogicValue="">
+			<Criteria Column="[dbo].[Orders].[ShipCountry]" Not="False" FieldFilter="False" Operator="Equals_Multiple" OrIsBlank="False" Description="" AliasTable="" Parameter="True" Value="Argentina,Brazil,Mexico,Venezuela" />
+		</Criterias>
+		<Selections>
+			<Selection ColumnName="[dbo].[Orders].[OrderDate]" ColumnSql="" Description="Label" Definition="" FormatString="GROUP_BY_QUARTER" GroupBy="False" OrderType="ASC" WidthSettedManually="False" Width="" Visible="True" Gradient="False" InsertZeroValues="False" AggregateFunction="GROUP_BY_QUARTER" Justification="NotSet" LabelJustification="Center" Master="False" GaugeValuesInCurrencyFormat="False" Operator="None" AliasTable="" ShouldBeFormatted="True" TargetReport="" GaugeTargetReport="" GaugeTargetEffect="" Url="example:Page.aspx?id={0}&amp;value={1}" SubtotalTitle="" ValueString="" SubtotalFunction="DEFAULT" SubtotalExpression="" IsItalic="False" IsBold="False" Coefficient="" ColumnGroup="" />
+			<Selection ColumnName="[dbo].[Orders].[OrderID]" ColumnSql="" Description="Value" Definition="" FormatString="{0:#,0}" GroupBy="False" OrderType="NONE" WidthSettedManually="False" Width="" Visible="True" Gradient="False" InsertZeroValues="False" AggregateFunction="COUNT_DISTINCT" Justification="NotSet" LabelJustification="Center" Master="False" GaugeValuesInCurrencyFormat="False" Operator="None" AliasTable="" ShouldBeFormatted="False" TargetReport="" GaugeTargetReport="" GaugeTargetEffect="" Url="example:Page.aspx?id={0}&amp;value={1}" SubtotalTitle="" ValueString="" SubtotalFunction="DEFAULT" SubtotalExpression="" IsItalic="False" IsBold="False" Coefficient="" ColumnGroup="" />
+			<Selection ColumnName="[dbo].[Orders].[ShipCountry]" ColumnSql="" Description="Separator" Definition="" FormatString="{0}" GroupBy="False" OrderType="NONE" WidthSettedManually="False" Width="" Visible="True" Gradient="False" InsertZeroValues="False" AggregateFunction="GROUP" Justification="NotSet" LabelJustification="Center" Master="False" GaugeValuesInCurrencyFormat="False" Operator="None" AliasTable="" ShouldBeFormatted="True" TargetReport="" GaugeTargetReport="" GaugeTargetEffect="" Url="example:Page.aspx?id={0}&amp;value={1}" SubtotalTitle="" ValueString="" SubtotalFunction="DEFAULT" SubtotalExpression="" IsItalic="False" IsBold="False" Coefficient="" ColumnGroup="" />
+		</Selections>
+		<ChartProperties>
+			<Property Name="CombineBottom" Value="0" />
+			<Property Name="CountInRow" Value="2" />
+			<Property Name="LabelTitle" Value="" />
+			<Property Name="Scale" Value="" />
+			<Property Name="ShowLegend" Value="True" />
+			<Property Name="ShowValueLabels" Value="False" />
+			<Property Name="Smooth" Value="True" />
+			<Property Name="ThirdMode" Value="true" />
+			<Property Name="UseSimpleStyle" Value="True" />
+			<Property Name="ValueTitle" Value="" />
+		</ChartProperties>
+	</Report>
+	<Report Title="Waterfall Validate" Code="" Name="Chart@Customizations\Waterfall Validate">
+		<Options Top="-999" Distinct="True" StoreResults="False" SelectVisibleColumns="True" ChartTypeName="Visualization" AddGrandTotals="False" AddPivotTotals="False" TotalsFunction="None" Invert="False" FieldValue="False" AddDeltas="False" LinesPerItem="1" ColumnsLimit="-1" ReportType="Chart" DashboardScroll="False" VisualGroupStyle="CommaDelimited" />
+		<Position X="0" Y="1" ColSpan="1" RowSpan="1" DbDsgn2Height="0" />
+		<JoinedTables UseAutoConditions="True" AllowNulls="False">
+			<JoinedTable Name="[dbo].[Invoices]" Alias="" RightAlias="" JoinType="INNER" LeftConditionColumn="" RightConditionTable="" RightConditionColumn="" />
+		</JoinedTables>
+		<Selections />
+		<ChartProperties>
+			<Property Name="VisualizationType" Value="Bar#Waterfall" />
+			<Property Name="VisSourceOfData" Value="" />
+			<Property Name="CombineBottom" Value="0" />
+			<Property Name="CountInRow" Value="2" />
+			<Property Name="ThirdMode" Value="true" />
+		</ChartProperties>
+	</Report>
+</ReportSet>
