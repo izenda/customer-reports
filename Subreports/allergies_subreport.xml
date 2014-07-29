@@ -5,8 +5,8 @@
 	<JoinedTables UseAutoConditions="True" AllowNulls="False">
 		<JoinedTable Name="[dbo].[Categories]" Alias="" RightAlias="" JoinType="INNER" LeftConditionColumn="" RightConditionTable="" RightConditionColumn="" />
 		<JoinedTable Name="[dbo].[Products]" Alias="" RightAlias="" JoinType="INNER" LeftConditionColumn="[dbo].[Products].[CategoryID]" RightConditionTable="[dbo].[Categories]" RightConditionColumn="[dbo].[Categories].[CategoryID]" />
-		<JoinedTable Name="[dbo].[Order Details]" Alias="" RightAlias="" JoinType="INNER" LeftConditionColumn="[dbo].[Order Details].[ProductID]" RightConditionTable="[dbo].[Products]" RightConditionColumn="[dbo].[Products].[ProductID]" />
-		<JoinedTable Name="[dbo].[Orders]" Alias="" RightAlias="" JoinType="INNER" LeftConditionColumn="[dbo].[Order Details].[OrderID]" RightConditionTable="[dbo].[Order Details]" RightConditionColumn="[dbo].[Orders].[OrderID]" />
+		<JoinedTable Name="[dbo].[Order_Details]" Alias="" RightAlias="" JoinType="INNER" LeftConditionColumn="[dbo].[Order_Details].[ProductID]" RightConditionTable="[dbo].[Products]" RightConditionColumn="[dbo].[Products].[ProductID]" />
+		<JoinedTable Name="[dbo].[Orders]" Alias="" RightAlias="" JoinType="INNER" LeftConditionColumn="[dbo].[Order_Details].[OrderID]" RightConditionTable="[dbo].[Order_Details]" RightConditionColumn="[dbo].[Orders].[OrderID]" />
 		<JoinedTable Name="[dbo].[Customers]" Alias="" RightAlias="" JoinType="INNER" LeftConditionColumn="[dbo].[Orders].[CustomerID]" RightConditionTable="[dbo].[Orders]" RightConditionColumn="[dbo].[Customers].[CustomerID]" />
 	</JoinedTables>
 	<Report Title="" Code="" Name="Detail">
